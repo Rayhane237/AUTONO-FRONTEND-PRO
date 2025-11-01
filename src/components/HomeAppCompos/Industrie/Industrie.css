@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.industrie-content {
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  padding: 8rem 2rem;
+  color: aliceblue;
+}
+
+.i-img  h4{
+  padding-left: 2rem;
+  color: rgb(255, 255, 255);
+}
+
+#i-top-text {
+   border-left: 2px solid #ffffff;
+  background-color: rgba(58, 202, 202, 0);
+  margin-bottom:5rem ;
+  padding: 1rem;
+  width: 50%;
+  height: 50vh;
+  
+
+}
+
+.i-text {
+ color: #ffffff;
+}
+
+
+.industrie-grid-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-left: 5rem;
+  color: #ffffff;
+  padding: 1rem;
+  margin-top: -1rem;
+  background-color: rgba(148, 173, 107, 0);
+ 
+}
+
+#i-grid1 {
+  margin-left: 2rem;
+  font-size: 2rem;
+  background-color: rgba(250, 128, 114, 0);
+  width: 40vw;
+}
+
+
+#i-grid2 {
+    margin-top: 21rem;
+    display: grid;
+    grid-template-columns: 1fr ;
+    gap: 4rem;
+    object-fit: cover;
+}
+
+#fade-industrie {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    
+}
+
+
+ img  {
+    margin-top: 2rem;
+    margin-left: 2rem;
+  background-color: rgb(0, 0, 0);
+  width: 45%;
+  height: 16vh;
+  object-fit: contain;
+} 
+
+/* ------------------ Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+

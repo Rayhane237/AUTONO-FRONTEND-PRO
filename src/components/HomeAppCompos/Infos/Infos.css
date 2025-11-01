@@ -1,0 +1,85 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ 
+.infos-body {
+   margin-top: -1.13rem;
+  background-image: linear-gradient(to top,rgb(255, 255, 255) , rgb(255, 255, 255));
+}
+
+
+.infos-content {
+    background-color:rgb(255, 255, 255);
+    
+}
+
+.infos-grid-container {
+    align-items: center;
+    display: grid ;
+    grid-template-columns: 1fr 1fr;
+    color: #030303;
+    padding: 1rem 0rem 0rem 0rem;
+    margin-top: -1rem;
+    background-color: rgba(255, 255, 255, 0.781);
+    border-left: #0c0c0c  2px solid;
+}
+
+#i-grid2 {
+    width: 100%;
+    margin-top: 5rem;
+    font-size: 1.5rem;
+    background-color: rgba(65, 105, 225, 0);
+    padding-left: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    
+   
+}
+#i-grid3 {
+    border-radius: 4rem;
+   width: 100%;
+    margin-top: 2rem;
+    font-size: 1rem;
+    object-fit: contain;
+    padding-right: 15rem;
+    padding-left: 1rem;
+   
+}
+
+h3 #i-grid {
+  font-size: 1rem;
+}
+
+
+.info-hero-section {
+  background-image: url('/public/info9.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 2rem;
+  width: 550px;
+    height: 65vh;
+  margin-top: -15rem;
+  border-radius: 2rem;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  
+}
+
+/* ----------------- SCROLL FADE-IN ANIMATION  */
+
+/* Initial state: hidden and slightly pushed down */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Visible state: fully shown */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.postes2-body {
+  background-color: #000000; 
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.p2-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 3rem;
+  padding: 5rem 2rem;
+  min-height: 200vh;
+}
+
+/* Base card style */
+.card-p2 {
+  width: 100%;
+  max-width: 870px;
+  background: linear-gradient(145deg, #000000, #000000);
+  color: #ffffff;
+  border-radius: 1.5rem;
+  padding: 3rem;
+  box-shadow: 0 0 25px rgba(233, 169, 129, 0.63);
+  opacity: 0;
+  transition: all 0.9s ease-out, box-shadow 0.3s ease-in-out;
+  transform: translateX(150px);
+  border: 1px solid rgba(255, 255, 255, 0.959);
+}
+
+/* Heading and paragraph */
+.card-p2 h2 {
+  font-size: 1.8rem;
+  color: #f9a66a;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-p2 p {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  color: #e6e9ff;
+}
+
+/* Hover effect */
+.card-p2:hover {
+  box-shadow: 0 0 35px rgba(241, 99, 11, 0.824), 0 0 15px rgba(255, 255, 255, 0.05);
+  transform: scale(1.02);
+}
+
+/* Odd / even animations */
+.card-po2:nth-child(odd) {
+  transform: translateX(150px);
+}
+
+.card-p2:nth-child(even) {
+  transform: translateX(-150px);
+}
+
+.card-p2.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+#cv-card {
+  background: #ffffff !important;  /* overrides the gradient */
+  color: #0a0e27; /* dark text for contrast */
+}
+
+
+.btn-poste {
+    width: 190px;
+    height: 2.4rem;
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    border-right: #000000;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    border: none;
+    background-color: #fff;
+
+}
+
+.btn-poste:hover {
+    color: #fff;
+    background-color: #644238;
+}
+
+.arrow {
+   
+    border-left: #000000;
+    font-weight: 30;
+    margin-left: 2rem;
+}

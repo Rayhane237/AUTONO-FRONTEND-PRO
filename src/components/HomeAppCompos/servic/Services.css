@@ -1,0 +1,76 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ 
+.services-body {
+  background-color:  rgba(235, 240, 243, 0.781);
+ 
+}
+
+.services-content {
+    background-color:rgba(235, 240, 243, 0.781);
+    padding: 8rem 2rem;
+}
+
+.services-grid-container {
+    align-items: center;
+    display: grid ;
+    grid-template-columns: 1fr 1fr;
+    color: #030303;
+    padding: 1rem 0rem 0rem 0rem;
+    margin-top: -1rem;
+    background-color: rgba(235, 240, 243, 0.781);
+    border-left: #0c0c0c  2px solid;
+}
+
+#s-grid1 {
+    margin-left: 2rem;
+    font-size: 2rem;
+    background-color: rgba(235, 240, 243, 0.781);
+    width: 40vw;
+}
+#s-grid2 {
+    font-size: 1.5rem;
+    background-color: rgba(65, 105, 225, 0);
+    padding-left: 2rem;
+   
+}
+#s-grid3 {
+   margin-left: 10rem;
+    object-fit: contain;
+    padding-left: 2rem;
+    height: fit-content;
+   
+}
+
+
+.hero-section {
+  background-image: url('/public/auto5.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-left: 2rem;
+  width: 430px;
+    height: 110vh;
+  margin-top: -12rem;
+  border-radius: 2rem;
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+  
+}
+
+/* ----------------- SCROLL FADE-IN ANIMATION  */
+
+/* Initial state: hidden and slightly pushed down */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Visible state: fully shown */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

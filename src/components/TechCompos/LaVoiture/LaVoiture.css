@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.voiture-content {
+    background:#050817;
+  padding: 8rem 2rem;
+}
+
+.voi-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  color: #ffffff;
+  padding: 1rem;
+  margin-top: -1rem;
+  background-color: rgba(188, 75, 75, 0);
+  border-left: 2px solid #ffffff;
+}
+
+#voi-grid1 {
+  margin-left: 1.2rem;
+  font-size: 1.8rem;
+  background-color: rgba(198, 196, 214, 0);
+  width: 40vw;
+  height: 50vh;
+}
+
+#voi-grid2 {
+  object-fit: contain;
+}
+
+#hero-voiture-section {
+  background-image: url("/pics-thec/thech3.jpg");
+    background-size: cover;
+  background-repeat: no-repeat;
+  width: 610px;
+    height: 65vh;
+  margin-top: -2rem;
+  border-radius: 2rem;
+  
+
+}
+/* ------------------ Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

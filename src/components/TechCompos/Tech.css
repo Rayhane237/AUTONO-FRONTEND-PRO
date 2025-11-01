@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.tech-hero-section  {
+    background-image: url("/pics-thec/why1.jpg");
+    color: black;
+    background-color: rgb(255, 255, 255);
+    height: 80vh;
+    background-size: cover;
+    z-index: -100;
+    
+
+}
+
+.tech-hero-section h1 {
+    background-color: rgba(164, 197, 215, 0.411);
+    padding-top: 10rem;
+    text-align: center;
+    font-size: 4rem;
+    height: 80vh;
+    margin-bottom: 2rem;
+}
+
+

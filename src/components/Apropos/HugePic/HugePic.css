@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.huge-background {
+  /* Parallax background effect */
+  background-image: url('/pics-thec/perfect-huge.jpg'); /* path from public folder */
+  background-attachment: fixed;      /*  makes the parallax effect */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  height: 100vh;                     /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem 2rem;
+  color: white;
+}
+
+
+
+/* Optional fade-in effect on load */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

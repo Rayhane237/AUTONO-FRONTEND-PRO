@@ -1,0 +1,83 @@
+/* Reset */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.chiffres-body {
+  min-height: 70vh;
+  background-color: #ffffff;
+}
+
+
+/* Layout for the Chiffres section */
+.grid-chiffre-container {
+  
+  display: grid;
+  margin-top: 5rem;
+  grid-template-columns: 1fr 1fr;
+  background-size: contain;
+  color: rgb(10, 10, 10); /* or black depending on image contrast */
+  position: relative;
+}
+
+#img-machine img {
+  margin-top: 0rem;
+  background-color: #ffffff;
+  width: 500px;
+  height: 60vh;
+}
+
+.grid-chiffres {
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-right: 15rem;
+  text-align: center;
+  gap: 5rem;
+  padding: 2rem;
+}
+
+.grid-item h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.grid-item h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555;
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+
+/* thin half-black, half-grey underline between h1 and h3 */
+.grid-item::after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 2.5px;
+  margin: 0.4rem auto;
+  border-radius: 5rem;
+  background: linear-gradient(to right, #000 50%, #999 50%);
+}
+
+/*  Fade-in effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: slight stagger effect for smoother reveal */
+.grid-item:nth-child(1) { transition-delay: 0.1s; }
+.grid-item:nth-child(2) { transition-delay: 0.2s; }
+.grid-item:nth-child(3) { transition-delay: 0.3s; }
+.grid-item:nth-child(4) { transition-delay: 0.4s; }

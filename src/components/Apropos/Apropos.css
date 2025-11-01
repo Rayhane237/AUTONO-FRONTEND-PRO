@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.ap-hero-section  {
+    background-image: url("/pics-thec");
+    color: rgb(50, 74, 131);
+    background-color: rgb(255, 255, 255);
+    height: 80vh;
+    background-size: cover;
+    z-index: -100;
+    border-bottom: 1px black solid;
+    
+
+}
+.ap-hero-section h3 {
+    margin: 4rem;
+    text-align: center;
+    font-size: 1.3rem;
+
+}
+.ap-hero-section h1  {
+    background-color: rgba(0, 0, 0, 0);
+    padding-top: 10rem;
+    text-align: center;
+    font-size: 3rem;
+   
+    margin-bottom: 2rem;
+}

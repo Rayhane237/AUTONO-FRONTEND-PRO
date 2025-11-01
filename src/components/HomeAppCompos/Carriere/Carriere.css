@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+ 
+.carriere-body {
+  height: 100vh;
+  background-color:  rgb(255, 255, 255);
+ 
+}
+
+.carriere-content {
+    background-color:rgba(255, 255, 255, 0.911);
+    padding: 8rem 2rem;
+    height: 50vh;
+}
+
+.carriere-grid-container {
+    align-items: center;
+    display: grid ;
+    gap: 1rem;
+    grid-template-columns: 1fr  1fr;
+    color: #030303;
+    padding: 1rem 0rem 0rem 0rem;
+    margin-top: -1rem;
+    height: 60vh;
+    background-color: rgb(255, 255, 255);
+    border-left: #000000  2px solid;
+}
+
+#carriere-grid1 {
+    margin-left: 2rem;
+    font-size: 2rem;
+    background-color: rgba(167, 20, 216, 0.781);
+    width: 40vw;
+}
+#carriere-grid2 {
+    font-size: 1.5rem;
+    background-color: rgb(255, 255, 255);
+    padding-left: 2rem;
+    margin-bottom: 15rem;
+   color: #000000;
+}
+#carr-grid3 {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.792); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 3rem;
+    margin-bottom: 10rem;
+    border: 2px rgb(205, 156, 76) solid;
+    border-radius: 2rem;
+    object-fit: contain;
+    padding-left: 2rem;
+    height: 50vh;
+    color: rgb(0, 0, 0);
+    width: 80%;
+   
+}
+.abonner-btn {
+    width: 100px;
+    height: 2.5rem;
+     border-top-right-radius: 0.5rem;
+    border-bottom-right-radius:0.5rem ;
+    border: none;
+    color: #ffffff;
+    background-color: black;
+}
+.abonner-btn:hover {
+      color: #ffffff;
+    background-color: rgb(132, 69, 5);
+}
+.abonner {
+    width: 68%;
+    height: 2.5rem;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius:0.5rem ;
+    border:  1px black solid;
+}
+.carr-list {
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: flex-start;
+    gap: 2rem;
+    
+    
+}
+#carr-auto {
+    font-weight: 800;
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+
+.insta-icon {
+    font-size: 1.8rem;
+   color: rgb(128, 100, 179);
+}
+
+.email-me {
+    position: relative;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.386);
+    margin-left: 10rem;
+    display: flex;
+    gap: 5%;
+    margin-bottom: 10rem;
+}
+/* ----------------- SCROLL FADE-IN ANIMATION  */
+
+/* Initial state: hidden and slightly pushed down */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Visible state: fully shown */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

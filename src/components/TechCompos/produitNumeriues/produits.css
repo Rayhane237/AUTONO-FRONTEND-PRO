@@ -1,0 +1,57 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.produits-content {
+    background-color: rgb(255, 255, 255);
+  padding: 8rem 2rem;
+}
+
+.produits-grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 4rem;
+  color: #000000;
+  padding: 1rem;
+  margin-top: -1rem;
+  background-color: rgba(188, 75, 75, 0);
+  border-left: 1px black solid;
+}
+
+#pro-grid1 {
+  margin-left: 2rem;
+  font-size: 1.8rem;
+  background-color: rgba(236, 240, 241, 0);
+  width: 40vw;
+  height: 50vh;
+}
+
+#pro-grid2 {
+  object-fit: contain;
+}
+
+#hero-pro-section {
+  background-image: url("/pics-thec/chiffres.jpg");
+    background-size: cover;
+  background-repeat: no-repeat;
+  width: 580px;
+    height: 55vh;
+  margin-top: -2rem;
+  border-radius: 2rem;
+  
+
+}
+/* ------------------ Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

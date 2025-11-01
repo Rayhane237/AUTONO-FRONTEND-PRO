@@ -1,0 +1,211 @@
+/* Nav.css */
+
+.Navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 1rem 2rem;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+}
+
+.abboner-nav {
+  background-color: #15191d;
+  height: 2.2rem;
+  border-radius: 0.5rem;
+  width: 100px;
+  padding: 0.6rem;
+  padding-left: 0.9rem;
+}
+
+.btn-nav {
+  background-color: #15191d00;
+  height: 2.2rem;
+  border-radius: 0.5rem;
+  width: 90px;
+  padding: 0.6rem;
+  padding-left: 0.8rem;
+  color: #15191d;
+}
+
+
+.logo h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #15191d;
+  margin: 0;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 10%;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-links li {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-links li:hover {
+  color: #fca311;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Mobile menu hidden by default */
+.nav-links {
+  transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 888px) {
+  .nav-links {
+    position: absolute;
+    top: -100vh; /* Hide off-screen */
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem 0;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    top: 50px; /* Slide down from top */
+  }
+
+  .menu-icon {
+    display: block;
+    color: #1a1c34;
+  }
+}
+
+
+/* ==== Subscribe (Abonner) Section ==== */
+.ab-bottom {
+  position: fixed;
+  bottom: -100vh;
+  left: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.25);
+  border-radius: 25px 25px 0 0;
+  transition: bottom 0.5s ease-in-out;
+  z-index: 9999;
+  padding: 2rem 1rem;
+  color: #222;
+}
+
+.ab-bottom.show {
+  bottom: 0;
+}
+
+.ab-header {
+  background-color: #fca21100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgba(212, 159, 73, 0.4);
+  padding-bottom: 0.5rem;
+}
+
+.ab-header h3 {
+  color: rgba(212, 159, 73, 1);
+  font-size: 1.5rem;
+}
+
+.ab-content {
+  background-color: rgba(127, 255, 212, 0);
+  padding-bottom: 2rem;
+}
+
+.close-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #131217;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-icon:hover {
+  transform: scale(1.1);
+  color: rgba(212, 159, 73, 1);
+}
+
+/* Content inside */
+.carriere-grid {
+  background-color: rgba(12, 76, 76, 0);
+  margin-top: 1.5rem;
+  text-align: start;
+}
+
+.carriere-grid h1 {
+  color: rgba(212, 159, 73, 1);
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.carriere-grid h3 {
+  color: #333;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+}
+
+/* Input and button */
+.input-subscribe {
+  background-color: #fffffff9;
+  display: flex;
+  flex-direction: column;
+  margin-top: -1.5rem;
+  margin-left: 27rem;
+  gap: 1rem;
+}
+
+.input-subscribe label {
+  font-weight: bold;
+  color: #444;
+}
+
+.ab-input {
+  background-color: rgba(255, 255, 255, 0.272);
+  width: 70%;
+  max-width: 400px;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #aaa;
+  outline: none;
+  font-size: 1rem;
+}
+
+.ab-btn {
+  background: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  width: 20%;
+  height: 2.3rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.ab-btn:hover {
+  transform: scale(1.05);
+  background: rgb(185, 140, 65);
+}
