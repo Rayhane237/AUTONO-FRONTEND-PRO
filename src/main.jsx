@@ -12,9 +12,6 @@ import ChercheurIa from './components/Career/Postes2/Chercheur-ia/ChercheurIa';
 import ScientifiqueData from './components/Career/Postes2/scientifique-donnees/ScientifiqueData';
 import Apprendre from './components/Career/Postes2/apprend/Apprentissage';
 
-import CvApprentissage from "./components/Career/les CVs/CvApprentissage"
-import CvChercheurIa from './components/Career/les CVs/CvChercheurIa';
-import CvDataCsientiste from './components/Career/les CVs/CvDataCsientiste';
 import CvIngenieur from './components/Career/les CVs/CvIngenieur';
 
 
@@ -57,18 +54,8 @@ const router = createBrowserRouter([
      path: "/CvIngenieur",
      element: <CvIngenieur />
   },
-  {
-     path: "/CvDataCsientiste",
-     element: <CvDataCsientiste />
-  },
-  {
-     path: "/CvApprentissage",
-     element: <CvApprentissage />
-  },
-  {
-     path: "/CvChercheurIa",
-     element: <CvChercheurIa />
-  }
+  
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
