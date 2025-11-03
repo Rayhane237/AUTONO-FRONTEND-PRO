@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* --- CONTAINER PRINCIPAL --- */
+.ing-body {
+  min-height: 100vh; /* s’adapte au contenu */
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+}
+
+/* --- HERO SECTION --- */
+.ing-hero-section {
+  background-image: url("/pics-thec");
+  background-size: cover;
+  background-position: center;
+  color: #0b111d;
+  background-color: #ffffff;
+  min-height: 80vh; /* <-- remplace height par min-height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.ing-hero-section h1 {
+
+  color: #000;
+  font-size: 4rem;
+  margin-top: 2rem;
+}
+
+.ing-hero-section h3 {
+  max-width: 970px;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin-top: 3rem;
+  color: #1f2937;
+}
+
+/* --- STATS GRID --- */
+.grid-ing {
+  display: flex;
+  gap: 5rem;
+  padding: 2rem 4rem;
+  background-color: #d2d1d100;
+  border-radius: 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.grid-i {
+  padding: 3rem 5rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-i:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.grid-i h3 {
+  font-size: 1rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.underline {
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(to right, rgb(6, 9, 11), rgb(181, 181, 181));
+  margin: 0.5rem auto 1rem;
+  border-radius: 3px;
+}
+
+.grid-i h1 {
+  font-size: 1.4rem;
+  color: #0f172a;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}

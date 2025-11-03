@@ -51,7 +51,7 @@
 
 /* Hover effect */
 .card-p2:hover {
-  box-shadow: 0 0 35px rgba(241, 99, 11, 0.824), 0 0 15px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 35px rgba(241, 172, 11, 0.824), 0 0 15px rgba(255, 255, 255, 0.05);
   transform: scale(1.02);
 }
 
@@ -84,14 +84,15 @@
     border-right: #000000;
     border-radius: 0.5rem;
     font-weight: 600;
-    border: none;
-    background-color: #fff;
+    border: 1px white solid;
+    background-color: #000000;
+    color: #ffffff;
 
 }
 
 .btn-poste:hover {
-    color: #fff;
-    background-color: #644238;
+    color: #000000;
+    background-color: #ffffff;
 }
 
 .arrow {

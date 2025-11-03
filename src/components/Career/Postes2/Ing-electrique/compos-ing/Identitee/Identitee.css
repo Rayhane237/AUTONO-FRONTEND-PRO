@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.identitee-body {
+  padding: 2rem;
+  border-top:1px  #222 solid;
+  padding: 0rem;
+  background-color: #000000fb;
+  color: #ffffff;
+  min-height: 100vh;
+ 
+}
+
+.identitee-body h1 {
+    color: #ffffff;
+  padding: 3rem 3rem;
+  margin-bottom: 2rem;
+  font-size: 2.3rem;
+  border-bottom: 1px rgb(254, 254, 254) solid;
+
+  
+}
+
+.identitee-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+
+
+.list-ul-list {
+  list-style-type: disc;
+  padding-left: 2rem;
+  width: 45%;
+}
+
+.list-ul-list li {
+  margin-bottom: 1rem;
+}
+
+.list-ul-list h3 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/* --- Effet fade-in --- */
+.fade-in-li {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in-li.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.iden-button button{
+    color: aliceblue;
+    background-color: black;
+    position: relative;
+    margin-top: 0rem;
+    margin-bottom: 3rem;
+    margin-left: 50rem;
+    width: 200px;
+    font-size: 1rem;
+    height: 2.5rem;
+    border-color: aliceblue;
+    border-radius: 1rem;
+
+}
+
+.iden-button button:hover {
+    color: black;
+    background-color: aliceblue;
+}
+
+.arrow {
+   
+    border-left: #000000;
+    font-weight: 30;
+    margin-left: 2rem;
+}

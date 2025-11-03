@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+ 
+}
+
+.taches-body {
+  border-top:1px  #222 solid;
+  padding: 0rem;
+  background-color: #f7f7f700;
+  color: #222;
+  min-height: 80vh;
+}
+
+.taches-body h1 {
+  padding:3rem 2rem;
+  border-bottom: 1px black solid;
+  text-align: start;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  
+}
+
+.taches-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+
+
+.list-ul-list {
+  list-style-type: disc;
+  padding-left: 2rem;
+  width: 45%;
+}
+
+.list-ul-list li {
+  margin-bottom: 1rem;
+}
+
+.list-ul-list h3 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+/* --- Effet fade-in --- */
+.fade-in-li {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+
+.fade-in-li.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

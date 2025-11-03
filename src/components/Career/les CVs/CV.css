@@ -1,0 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.career-h1  {
+    font-size: 5rem;
+    
+}
+
+.form-content {
+    gap: 1rem;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+input {
+    width: 700px;
+    height: 3rem;
+    border-radius: 0.5rem;
+}
+
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 700px;
+  
+}
+
+
+#comment {
+    padding-bottom: 7rem;
+    height: 10rem;
+}
+
+.cv-btn {
+    background-color: black;
+    color: aliceblue;
+    height: 3rem;
+    width: 200px;
+    font-size: 1.6rem;
+    margin-right: 30rem;
+    border-radius: 0.5rem;
+}
+
+.cv-btn:hover{
+  color: rgb(255, 255, 255);
+  background-color: rgb(13, 34, 91);
+}
+
+select {
+  width: 700px;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  padding: 0 1rem;
+  background-color: #fff;
+  font-size: 1rem;
+  color: #333;
+}
+
+select:focus {
+  outline: none;
+  border-color: #0d225b;
+  box-shadow: 0 0 5px rgba(167, 186, 239, 0.3);
+}
+
+input:hover ,select:hover {
+    box-shadow: 0 0 black;
+    background-color: #0d225b3f;
+    transition: all 0.3s ease; /*rendre la transition fluide*/
+}
+
