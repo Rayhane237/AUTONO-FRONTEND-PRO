@@ -31,29 +31,30 @@ const LaVoiture = () => {
           <h6 className='fade-in'>LA VOITURE AUTONO</h6>
           <br />
           <h3 className='fade-in'>
-                  LA VOITURE AUTONO
+                  <h1>LA VOITURE AUTONO</h1>
+                  <br />
                   Grâce à une technologie de capteurs révolutionnaire basée sur la perception, la voiture Autono est un véhicule entièrement sans conducteur, conçu avec le plus haut degré de précision et de sécurité. C'est la conduite autonome réimaginée.</h3>
           <br />
       
         </div>
 
-        <div className='voi-grid fade-in' id='voi-grid2'>
+        <div className='voi-grid fade-in' id='voi-grid1'>
           <div id='hero-voiture-section' className='fade-in' />
         </div>
       </div>
 
       <br />
          <div className='voi-grid-container'>
-        <div className='voi-grid fade-in' id='voi-grid1'>
-          <h3 className='fade-in'>CONCEPTION CENTRÉE SUR L'HUMAIN</h3>
+        <div className='voi-grid fade-in' id='voi-grid3'>
+          <h1 className='fade-in'>CONCEPTION CENTRÉE SUR L'HUMAIN</h1>
           <br />
           <h4 className='fade-in'>
                Autono place l’utilisateur au cœur de chaque interaction. L’interface est pensée pour être intuitive, accessible et agréable, facilitant la prise de décision et renforçant la confiance. Chaque fonctionnalité est conçue pour répondre aux besoins réels des conducteurs, en alliant sécurité, confort et simplicité d’usage.</h4>
           <br />
        <br />
         </div>
-         <div className='voi-grid fade-in' id='voi-grid1'>
-          <h3 className='fade-in'>FAIBLES ÉMISSIONS ET EFFICACITÉ</h3>
+         <div className='voi-grid fade-in' id='voi-grid2'>
+          <h1 className='fade-in'>FAIBLES ÉMISSIONS ET EFFICACITÉ</h1>
           <br />
           <h4 className='fade-in'>
               Autono favorise une mobilité durable en optimisant chaque trajet pour réduire les émissions et la consommation énergétique. Grâce à l’intelligence artificielle, le véhicule adopte une conduite plus fluide, évite les embouteillages et sélectionne les itinéraires les plus efficients. Résultat : moins de pollution, plus d’autonomie, et une conduite respectueuse de l’environnement.</h4>

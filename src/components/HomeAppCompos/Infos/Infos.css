@@ -83,3 +83,40 @@ h3 #i-grid {
   opacity: 1;
   transform: translateY(0);
 }
+
+@media(max-width:770px){
+  .infos-grid-container {
+    margin-left: 1rem;
+    border-left: none;
+    grid-template-columns: 1fr;
+  }
+
+  .info-hero-section {
+    width: 660px;
+  }
+
+  #i-grid3 h2 {
+    background-color: rgba(255, 255, 255, 0);
+    font-size: 2rem;
+    width: 700px;
+    padding-left: 1rem;
+  }
+}
+
+@media(max-width:370px){
+  .info-hero-section {
+    width: 400px;
+    margin-left: -4rem;
+    padding-left: 0;
+  }
+  #i-grid3 h2 {
+    padding: 0;
+    width: 87vw;
+    font-size:1.4rem ;
+  }
+  #i-grid3 h1 {
+    font-size: 2rem;
+    
+  }
+
+}

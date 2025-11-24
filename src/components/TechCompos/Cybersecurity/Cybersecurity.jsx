@@ -33,7 +33,7 @@ const Sybersecurity = () => {
           </h6>
         </div>
         
-          <div className='syber-grid fade-in' id='syber-grid1'>
+          <div className='syber-grid fade-in' id='syber-grid2'>
          
           <br />
           <h2 className='fade-in'>CYBERSÉCURITÉ AVANCÉE</h2>

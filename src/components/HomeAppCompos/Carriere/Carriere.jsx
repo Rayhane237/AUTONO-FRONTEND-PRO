@@ -78,11 +78,11 @@ const Services = () => {
                 </div>
             
           </div>
-           <div className='email-me'>
+           <div className='email-me' id='email-lili'>
             <div>
                 <h3>AUTONO web app created by  <a href=""> Tliba Rayhane@gmail.com </a>  </h3>
             </div>
-            <div>
+            <div >
                  <a href="https://www.instagram.com/rayhan____7/"><GrInstagram className='insta-icon'/></a>
             </div>
           </div>

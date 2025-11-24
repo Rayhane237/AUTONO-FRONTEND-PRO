@@ -55,3 +55,37 @@
     transform: translateY(0);
   }
 }
+
+
+@media(max-width:770px){
+  .why-grid-container {
+    width: 80vw;
+    margin-left: 20rem;
+  }
+  #w-grid2 {
+    width: 70vw;
+  }
+}
+
+
+@media(max-width:370px){
+  .why-content {
+    height: 250vh;
+  }
+  .why-grid-container {
+    background-color: #ff912a00;
+    width: 100vw;
+    margin-left: 15rem;
+    height: 60vh;
+    align-items: center;
+  }
+  #w-grid2 {
+    background-color: rgba(0, 0, 0, 0.769);
+    width: 95vw;
+    padding: 1rem;
+    font-size: 1.4rem;
+    margin-top: -9rem;
+    margin-left: 3.5rem;
+    border-radius: 1rem;
+  }
+}

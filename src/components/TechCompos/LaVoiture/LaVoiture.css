@@ -21,16 +21,17 @@
   border-left: 2px solid #ffffff;
 }
 
-#voi-grid1 {
+#voi-grid1  {
   margin-left: 1.2rem;
   font-size: 1.8rem;
-  background-color: rgba(198, 196, 214, 0);
+  background-color: rgba(11, 8, 32, 0.112);
   width: 40vw;
   height: 50vh;
 }
 
-#voi-grid2 {
+#voi-grid2 ,#voi-grid3 {
   object-fit: contain;
+  background-color: rgba(142, 193, 193, 0);
 }
 
 #hero-voiture-section {
@@ -54,4 +55,141 @@
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media(max-width:770px){
+  .voi-grid-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-left: 2rem;
+  }
+
+  .voiture-content {
+    height: 150vh;
+    padding-left: 2rem;
+  }
+ 
+  #hero-voiture-section {
+    width: 650px;
+    height: 50vh;
+    margin-top: 0rem;
+
+  }
+   #voi-grid1 {
+    
+    width: 100vw;
+    height: 40vh;
+    margin-top: -3rem;
+   
+  }
+
+  #voi-grid3 {
+    margin-top: 3rem;
+  }
+  
+  #voi-grid3 h1 {
+    padding-left: 0;
+    font-size: 1.7rem;
+    width: 90vw;
+  }
+
+
+
+  #voi-grid3 h4 {
+    font-size: 1.3rem;
+    width: 90vw;
+  }
+
+
+  #voi-grid2 {
+    margin-top: 3rem;
+  }
+
+  
+  #voi-grid2 h1 {
+    font-size: 1.7rem;
+    width: 90vw;
+
+  }
+
+  
+  #voi-grid2 h4 {
+    font-size: 1.5rem;
+    width: 90vw;
+  }
+
+
+}
+
+@media (max-width: 370px) {
+  
+  .voiture-content {
+    height: 310vh;
+    padding-left: 0rem;
+  }
+
+  .voi-grid-container {
+    gap: 2rem;
+  }
+
+   #hero-voiture-section {
+    width: 370px;
+    height: 35vh;
+    margin-top: 15rem;
+
+  }
+ 
+    #voi-grid1 {
+    width: 96vw;
+    height: 38vh;
+    margin-top: -3rem;
+    padding-left: 0;
+    margin: 0;
+   
+  }
+  #voi-grid1 h3 {
+    font-size: 1.7rem;
+    width: 90vw;
+  }
+
+  #voi-grid1 h1 {
+    font-size: 1.7rem;
+  }
+
+  #voi-grid3 {
+    margin-top: 15rem;
+  }
+  
+  #voi-grid3 h1 {
+    padding-left: 0;
+    font-size: 1.7rem;
+    width: 90vw;
+  }
+
+
+
+  #voi-grid3 h4 {
+    font-size: 1.3rem;
+    width: 90vw;
+  }
+
+
+  #voi-grid2 {
+    margin-top: 3rem;
+  }
+
+  
+  #voi-grid2 h1 {
+    font-size: 1.7rem;
+    width: 90vw;
+
+  }
+
+  
+  #voi-grid2 h4 {
+    font-size: 1.5rem;
+    width: 90vw;
+  }
+
+
 }

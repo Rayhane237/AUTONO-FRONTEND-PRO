@@ -16,12 +16,11 @@
   color: #0b0b0b;
   padding: 1rem;
   margin-top: -1rem;
-  background-color: rgba(188, 75, 75, 0);
+  background-color: rgba(75, 188, 83, 0);
   border-left: 2px solid #131212;
 }
 
 #inno-grid1 {
-
   font-size: 2rem;
   background-color: rgba(250, 128, 114, 0);
   width: 35vw;
@@ -53,4 +52,19 @@
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media(max-width:370px){
+  .innovation-grid-container {
+    grid-template-columns: 1fr;
+  }
+  #inno-grid1 {
+    width: 80vw;
+  }
+
+  .hero-section-inno {
+    margin-top: -1rem;
+    width: 400px;
+    height: 40vh;
+  }
 }

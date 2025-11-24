@@ -6,7 +6,7 @@
 
 .syber-content {
   padding: 8rem 2rem;
-  border-top:1px solid #121023;
+  border-top:1px solid #14112a;
 }
 
 .syber-grid-container {
@@ -21,10 +21,10 @@
   border-left: 2px solid #000000;
 }
 
-#syber-grid1 {
+#syber-grid1 ,#syber-grid2 {
   margin-left: 2rem;
   font-size: 1.8rem;
-  background-color: rgba(214, 198, 196, 0);
+  background-color: rgba(193, 49, 30, 0);
   width: 40vw;
   height: 50vh;
 }
@@ -39,4 +39,46 @@
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media(max-width:770px){
+  .syber-content {
+    height: 90vh;
+  }
+  .syber-grid-container {
+    grid-column: 0.1rem;
+    grid-template-columns: 1fr;
+  }
+
+  #syber-grid1 {
+    width: 85vw;
+  }
+
+  #syber-grid2 {
+    margin-top: -15rem;
+    width: 80vw;
+  }
+}
+
+
+@media(max-width:370px){
+  .syber-content {
+    height: 140vh;
+    padding: 5.5rem 0.5rem;
+  }
+  .syber-grid-container {
+    grid-column: 0.1rem;
+    grid-template-columns: 1fr;
+  }
+
+  #syber-grid1 ,#syber-grid2 {
+    width: 85vw;
+    background-color: rgba(0, 255, 255, 0);
+    margin-left: 0rem;
+  }
+
+  #syber-grid2 {
+    margin-top: 5rem;
+    
+  }
 }

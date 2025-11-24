@@ -81,3 +81,28 @@
 .grid-item:nth-child(2) { transition-delay: 0.2s; }
 .grid-item:nth-child(3) { transition-delay: 0.3s; }
 .grid-item:nth-child(4) { transition-delay: 0.4s; }
+
+
+@media(max-width:770px){
+  .grid-chiffres {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width:370px){
+  .grid-chiffre-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #img-machine img {
+    width: 350px;
+    margin-left: 0;
+  }
+
+  .grid-chiffres {
+    background-color: rgba(250, 235, 215, 0);
+    align-items: center;
+    margin-left: 4rem;
+  }
+}

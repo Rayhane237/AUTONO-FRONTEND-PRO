@@ -21,3 +21,13 @@
     color: black;
     background-color: aliceblue;
 }
+
+@media(max-width:770px) {
+    .ia-button {
+        margin-right: 20rem;
+    }
+}
+
+@media(max-width:370px){
+
+}

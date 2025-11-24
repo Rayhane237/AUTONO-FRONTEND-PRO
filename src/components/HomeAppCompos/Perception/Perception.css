@@ -35,7 +35,7 @@
   background-repeat: no-repeat;
   margin-right: 5rem;
   width: 530px;
-    height: 65vh;
+  height: 65vh;
   margin-top: -8rem;
   border-radius: 2rem;
   border-top-left-radius: 3rem;
@@ -53,4 +53,41 @@
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media(max-width:770px){
+  .perception-grid-container {
+    grid-template-columns: 1fr;
+    gap: 10rem;
+  }
+  #p-grid1 {
+    width: 90vw;
+  }
+
+  .hero-section-perception {
+    height: 40vh;
+  }
+}
+
+
+@media(max-width:370px){
+  .perception-content {
+    padding: 3rem 1rem;
+  }
+  .perception-grid-container {
+    grid-template-columns: 1fr;
+    gap: 10rem;
+    padding-left: 0.5rem;
+    border: none;
+    background-color: rgba(255, 235, 205, 0);
+  }
+  #p-grid1 {
+    padding: 0;
+    margin-right: 5rem;
+    width: 90vw;
+  }
+
+  .hero-section-perception {
+    height: 40vh;
+  }
 }

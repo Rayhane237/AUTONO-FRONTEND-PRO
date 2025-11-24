@@ -49,7 +49,7 @@
   display: flex;
   gap: 5rem;
   padding: 2rem 4rem;
-  background-color: #d2d1d100;
+  background-color: #d8f5f200;
   border-radius: 1rem;
   text-align: center;
   margin-top: 2rem;
@@ -57,7 +57,7 @@
 
 .grid-i {
   padding: 3rem 5rem;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(203, 236, 253, 0.667);
   border-radius: 0.75rem;
   padding: 1.5rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -89,4 +89,54 @@
   color: #0f172a;
   font-weight: 600;
   margin-top: 0.5rem;
+}
+
+
+@media(max-width:370px){
+  .ing-hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .grid-ing {
+    text-align: start;
+    flex-direction: column;
+    
+  }
+
+   .list-ul-list {
+    background-color: rgba(0, 255, 255, 0);
+    width: 500rem;
+    padding: 0 ; 
+  }
+
+  .list-ul-list li {
+    background-color: rgba(54, 212, 212, 0);
+    margin-bottom: 2rem;
+    text-align: start;
+    width: 80vw;
+  }
+
+  .list-ul-list h2 {
+    font-size: 1rem; 
+    
+  }
+
+  .taches-body h1,
+  .identitee-body h1 {
+    font-size: 1.5rem; 
+    text-align: center;
+  }
+
+  .taches-container {
+    flex-direction: column;
+   
+  }
+
+  .ia-button button {
+    font-size: 1rem;
+    padding: 0.6rem 1rem;
+  }
+
+  
+
 }

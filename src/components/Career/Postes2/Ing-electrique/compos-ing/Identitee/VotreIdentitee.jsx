@@ -79,8 +79,8 @@ const VotreIdentitee = () => {
 
       </div>
       
-            <div className='iden-button' >
-                <button onClick={navToCvIngenieur} >Postuler <FaArrowRight className='arr'></FaArrowRight>  </button>
+            <div className='iden' >
+                <button className='iden-btn' onClick={navToCvIngenieur} >Postuler <FaArrowRight className='arr'></FaArrowRight>  </button>
              </div>
 
     </div>

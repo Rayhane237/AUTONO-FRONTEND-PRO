@@ -51,9 +51,9 @@ const Postes2 = () => {
         },
          {
           title:"Vous n'avez pas trouvé le poste adéquat ? Envoyez-nous votre CV"
-           ,button:"Envoyez  cv" ,
+           ,button:"envoyez-cv" ,
            id:"cv-card",
-           path:"/envoyer-cv",
+           path:"/CvIngenieur",
            
          }
       ];

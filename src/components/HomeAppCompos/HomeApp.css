@@ -47,3 +47,14 @@ video {
    margin-top: -1rem;
    background-color: black;
 }
+
+@media(max-width:770px){
+  .avenir-text h1 {
+    font-size: 3rem;
+    
+  }
+
+  .avenir-text h4 {
+    font-size: 1.7rem;
+  }
+}

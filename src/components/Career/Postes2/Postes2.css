@@ -13,6 +13,7 @@
 .p2-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  flex-wrap: wrap;
   align-items: center;
   gap: 3rem;
   padding: 5rem 2rem;
@@ -70,9 +71,16 @@
 }
 
 
-#cv-card {
-  background: #ffffff !important;  /* overrides the gradient */
-  color: #0a0e27; /* dark text for contrast */
+#cv-card  {
+  background: #ffffff !important;  
+  color: #0a0e27;
+  border: 2px black solid;
+  
+}
+
+#cv-card:hover button{
+  color: #ffffff;
+  background: #000000 !important;
 }
 
 
@@ -81,11 +89,10 @@
     height: 2.4rem;
     margin-top: 2rem;
     font-size: 1.4rem;
-    border-right: #000000;
+    border:2px  #ffffff solid;
     border-radius: 0.5rem;
     font-weight: 600;
-    border: 1px white solid;
-    background-color: #000000;
+    background-color: #0f0f0f;
     color: #ffffff;
 
 }
@@ -97,7 +104,37 @@
 
 .arrow {
    
-    border-left: #000000;
+    border-left:2px #000000 solid;
     font-weight: 30;
     margin-left: 2rem;
+}
+
+@media(max-width:770px){
+  .p2-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width:370px){
+  .p2-cards {
+     padding: 0;
+     width: 30vw;
+
+  }
+  #cv-card {
+    height: 50vh;
+    margin-bottom: 10rem;
+    
+  }
+
+  #cv-card button {
+    height: 2.5rem;
+  }
+
+  
+#cv-card h2  {
+  font-size: 1.5rem;
+  
+}
+
 }

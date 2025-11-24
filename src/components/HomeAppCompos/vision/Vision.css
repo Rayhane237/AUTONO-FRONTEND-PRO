@@ -11,6 +11,7 @@
 .vision-grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  
   align-items: center;
   gap: 4rem;
   color: #ffffff;
@@ -23,7 +24,7 @@
 #v-grid1 {
   margin-left: 2rem;
   font-size: 1.8rem;
-  background-color: rgba(214, 198, 196, 0);
+  background-color: rgba(130, 68, 60, 0);
   width: 40vw;
   height: 50vh;
 }
@@ -53,4 +54,47 @@
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+@media(max-width:770px){
+  .vision-grid-container {
+     grid-template-columns: 2fr;
+     flex-direction: column;
+  }
+
+  #v-grid1 {
+    width: 95%;
+   margin-left: 0.5rem;
+  }
+  #hero-vision-section {
+    width: 690px;
+    padding-right: 10rem;
+    margin-top: -10rem;
+    margin-right: 2rem;
+    
+  }
+
+  
+}
+
+@media(max-width:370px){
+  #hero-vision-section {
+    margin-top: 0rem;
+    width: 350px;
+    height: 40vh;
+  }
+
+  .vision-content {
+   padding: 5rem 0.7rem;
+
+  }
+
+  #v-grid1  {
+    font-size: 1.4rem;
+    padding-right: 0.3rem;
+  }
+
+  #v-grid1 h5 {
+    width: 85vw;
+  }
 }
