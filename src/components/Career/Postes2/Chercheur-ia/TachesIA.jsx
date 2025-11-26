@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
-import "./IA.css";
+import "./AI.css"
+
 
 const TachesIng = () => {
   useEffect(() => {

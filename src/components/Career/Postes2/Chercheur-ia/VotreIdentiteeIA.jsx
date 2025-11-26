@@ -1,6 +1,6 @@
 import React from 'react'
 // import { useNavigate } from 'react-router-dom';
-import "./IA.css"
+import "./AI.css"
 import { FaArrowRight } from "react-icons/fa";
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';

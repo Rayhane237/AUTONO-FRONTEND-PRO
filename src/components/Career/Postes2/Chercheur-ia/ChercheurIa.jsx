@@ -1,5 +1,5 @@
 import React from 'react'
-import "./IA.css"
+import "./AI.css"
 import NavHome from '../../../nav/NavHome'
 import Carriere from "../../../HomeAppCompos/Carriere/Carriere"
 import TachesIA from './TachesIA'
