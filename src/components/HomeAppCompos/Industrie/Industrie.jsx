@@ -38,14 +38,14 @@ const Industrie = () => {
         
           <div className='i-img'>
              <h4>General Transport</h4>
-            <img src="/public/ind1-x.png" alt="General Transporter" />
+            <img src="/ind1-x.png" alt="General Transporter" />
           </div>
         </div>
 
         <div className='i-row fade-in'>  
           <div className='i-img'>
              <h4 >IDI Software</h4>
-            <img src="/public/ind-2.png" alt="IDI Software" />
+            <img src="/ind-2.png" alt="IDI Software" />
           </div>
         </div>
 
@@ -53,14 +53,14 @@ const Industrie = () => {
    
           <div className='i-img'>
              <h4 >Imogen Cars</h4>
-            <img src="/public/ind-imogen.png" alt="Imogen Cars" />
+            <img src="/ind-imogen.png" alt="Imogen Cars" />
           </div>
         </div>
 
         <div className='i-row fade-in'>
            <div className='i-img'>
              <h4 >TRI-NEX</h4>
-            <img src="/public/ind-tri-nex.png" alt="TRI-NEX" />
+            <img src="/ind-tri-nex.png" alt="TRI-NEX" />
           </div>
         </div>
 

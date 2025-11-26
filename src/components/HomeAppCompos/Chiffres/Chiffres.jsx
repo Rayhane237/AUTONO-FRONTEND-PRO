@@ -28,7 +28,7 @@ const Chiffres = () => {
 
         {/* Image section */}
         <div className='grid-chiffre fade-in' id='img-machine'>
-          <img src="/public/chiffre4.jpg" alt="machine" />
+          <img src="/chiffre4.jpg" alt="machine" />
         </div>
 
         {/* Stats section */}
