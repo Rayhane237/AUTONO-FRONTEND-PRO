@@ -5,132 +5,267 @@
 }
  
 .services-body {
-  background-color:  rgba(235, 240, 243, 0.781);
- 
+  background-color: rgba(235, 240, 243, 0.781);
 }
 
 .services-content {
-    background-color:rgba(235, 240, 243, 0.781);
+    background-color: rgba(235, 240, 243, 0.781);
     padding: 8rem 2rem;
 }
 
 .services-grid-container {
     align-items: center;
-    display: grid ;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     color: #030303;
-    padding: 1rem 0rem 0rem 0rem;
-    margin-top: -1rem;
+    padding: 1rem 0;
+    margin-top: 2rem;
+    gap: 2rem;
     background-color: rgba(235, 240, 243, 0.781);
-    border-left: #0c0c0c  2px solid;
+    border-left: #0c0c0c 2px solid;
 }
 
 #s-grid1 {
     margin-left: 2rem;
     font-size: 2rem;
     background-color: rgba(235, 240, 243, 0.781);
-    width: 40vw;
+    width: 100%;
+    max-width: 100%;
 }
+
+#s-grid1 h6 {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+}
+
+#s-grid1 h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+}
+
 #s-grid2 {
     font-size: 1.5rem;
     background-color: rgba(65, 105, 225, 0);
     padding-left: 2rem;
-   
+    padding-right: 1rem;
 }
+
+#s-grid2 h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#s-grid2 h4 {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
 #s-grid3 {
-   margin-left: 10rem;
     object-fit: contain;
     padding-left: 2rem;
     height: fit-content;
-   
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-
 .hero-section {
-  background-image: url('/auto5.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  margin-left: 2rem;
-  width: 430px;
-    height: 110vh;
-  margin-top: -12rem;
-  border-radius: 2rem;
-  border-top-left-radius: 5rem;
-  border-top-right-radius: 5rem;
-  
+    background-image: url('/auto5.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(231, 237, 240, 0.607);  /* Add background color to fill empty space */
+    width: 100%;
+    max-width: 630px;
+    height: 80vh;
+    min-height: 700px;
+    border-radius: 2rem;
+    border-top-left-radius: 5rem;
+    border-top-right-radius: 5rem;
 }
 
 /* ----------------- SCROLL FADE-IN ANIMATION  */
-
-/* Initial state: hidden and slightly pushed down */
 .fade-in {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Visible state: fully shown */
 .fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
-@media(max-width:770px){
-  
-   .services-grid-container {
-     grid-template-columns: 1fr;
-   } 
+/* Tablet and smaller laptops */
+@media (max-width: 1024px) {
+    .services-content {
+        padding: 6rem 1.5rem;
+    }
 
-   #s-grid2 {
-    margin-top: 5rem;
-    padding-left: 1rem;
-    width: 80%;
-   }
+    #s-grid1 {
+        margin-left: 1.5rem;
+        font-size: 1.8rem;
+    }
 
-   #s-grid3 {
-    margin-top: 15rem;
-    margin-right: 5rem;
-   }
+    #s-grid1 h2 {
+        font-size: 1.8rem;
+    }
 
-   .hero-section {
-    width: 520px;
-    padding-right: 2rem;
-    border-radius: 0;
-    height: 80vh;
-   }
+    #s-grid2 h1 {
+        font-size: 1.8rem;
+    }
 
+    #s-grid2 h4 {
+        font-size: 1.1rem;
+    }
+
+    .hero-section {
+        height: 55vh;
+        min-height: 350px;
+    }
 }
 
+/* Tablets and large mobile */
+@media (max-width: 770px) {
+    .services-content {
+        padding: 5rem 1.5rem;
+    }
 
-@media(max-width:370px){
-  .services-grid-container {
-     display: flex;
-     flex-direction: column;
-     padding-right: 1rem;
-     background-color: rgba(251, 252, 252, 0.26);
-   } 
+    .services-grid-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        border-left: none;
+        border-top: #0c0c0c 2px solid;
+        padding-top: 2rem;
+        margin-top: 0;
+    }
 
-   #s-grid1  {
-    margin-left: 0;
-    width: 90vw;
-   }
+    #s-grid1 {
+        margin-left: 0;
+        padding: 0 1rem;
+        font-size: 1.6rem;
+    }
+
+    #s-grid1 h2 {
+        font-size: 1.6rem;
+    }
 
     #s-grid2 {
-    margin-top: 4rem;
-    padding-left: 1rem;
-    width: 80vw;
-   }
-   #s-grid3 {
-    margin-top: 15rem;
-    margin-right: 5rem;
-   }
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: 100%;
+        margin-top: 0;
+    }
 
-   .hero-section {
-    width: 320px;
-    padding-right: 10rem;
-    border-radius: 0;
-    height: 80vh;
-   }
+    #s-grid2 h1 {
+        font-size: 1.6rem;
+    }
 
+    #s-grid2 h4 {
+        font-size: 1rem;
+    }
+
+    #s-grid3 {
+        padding-left: 0;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .hero-section {
+        width: 100%;
+        max-width: 100%;
+        height: 50vh;
+        min-height: 300px;
+        border-radius: 1.5rem;
+        border-top-left-radius: 3rem;
+        border-top-right-radius: 3rem;
+    }
 }
 
+/* Mobile devices */
+@media (max-width: 480px) {
+    .services-content {
+        padding: 4rem 1rem;
+    }
+
+    #s-grid1 {
+        font-size: 1.4rem;
+    }
+
+    #s-grid1 h6 {
+        font-size: 0.9rem;
+    }
+
+    #s-grid1 h2 {
+        font-size: 1.4rem;
+    }
+
+    #s-grid2 h1 {
+        font-size: 1.4rem;
+    }
+
+    #s-grid2 h4 {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .hero-section {
+        height: 45vh;
+        min-height: 280px;
+        border-radius: 1rem;
+        border-top-left-radius: 2rem;
+        border-top-right-radius: 2rem;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 370px) {
+    .services-content {
+        padding: 3rem 0.8rem;
+    }
+
+    .services-grid-container {
+        padding: 1.5rem 0.5rem;
+        gap: 2rem;
+    }
+
+    #s-grid1 {
+        font-size: 1.2rem;
+        padding: 0 0.5rem;
+    }
+
+    #s-grid1 h6 {
+        font-size: 0.85rem;
+    }
+
+    #s-grid1 h2 {
+        font-size: 1.2rem;
+    }
+
+    #s-grid2 {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+    #s-grid2 h1 {
+        font-size: 1.2rem;
+    }
+
+    #s-grid2 h4 {
+        font-size: 0.9rem;
+    }
+
+    #s-grid3 {
+        padding: 0;
+    }
+
+    .hero-section {
+        height: 40vh;
+        min-height: 250px;
+        border-radius: 0.8rem;
+        border-top-left-radius: 1.5rem;
+        border-top-right-radius: 1.5rem;
+    }
+}

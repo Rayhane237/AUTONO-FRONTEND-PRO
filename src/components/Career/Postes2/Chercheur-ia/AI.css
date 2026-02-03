@@ -1,33 +1,187 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-.ia-button button{
-    color: aliceblue;
-    background-color: black;
-    position: relative;
+.ia-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 3rem;
-    margin-left: 40rem;
-    width: 200px;
-    font-size: 1rem;
-    height: 2.5rem;
-    border-color: aliceblue;
-    border-radius: 1rem;
-
+    margin-bottom: 2rem;
+    width: 100%;
+    position: relative;
 }
 
+.ia-button button {
+    color: #000000;
+    background: linear-gradient(135deg, #f9a66a, #ff8c42);
+    width: 220px;
+    font-size: 1.1rem;
+    height: 3rem;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px rgba(249, 166, 106, 0.3),
+                0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Effet de brillance animé */
+.ia-button button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    transition: left 0.6s ease;
+}
+
+.ia-button button:hover::before {
+    left: 100%;
+}
+
+/* Effet au hover */
 .ia-button button:hover {
-    color: black;
-    background-color: aliceblue;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(249, 166, 106, 0.5),
+                0 4px 15px rgba(0, 0, 0, 0.15);
+    background: linear-gradient(135deg, #ff8c42, #f9a66a);
 }
 
-@media(max-width:770px) {
+.ia-button button:active {
+    transform: translateY(-1px) scale(0.98);
+    box-shadow: 0 4px 12px rgba(249, 166, 106, 0.4);
+}
+
+/* Effet de focus pour accessibilité */
+.ia-button button:focus {
+    outline: none;
+    box-shadow: 0 4px 15px rgba(249, 166, 106, 0.3),
+                0 0 0 3px rgba(249, 166, 106, 0.2);
+}
+
+/* Icône flèche si présente */
+.ia-button button .arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.ia-button button:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
     .ia-button {
-        margin-right: 20rem;
+        margin-top: 2.5rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .ia-button button {
+        width: 200px;
+        font-size: 1.05rem;
+        height: 2.8rem;
     }
 }
 
-@media(max-width:370px){
+/* Tablettes portrait et petits écrans */
+@media (max-width: 770px) {
+    .ia-button {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+    }
 
+    .ia-button button {
+        width: 190px;
+        height: 2.7rem;
+        font-size: 1rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .ia-button {
+        margin-top: 1.8rem;
+        margin-bottom: 1.2rem;
+        padding: 0 1rem;
+    }
+
+    .ia-button button {
+        width: 100%;
+        max-width: 250px;
+        height: 2.8rem;
+        font-size: 1rem;
+    }
+
+    .ia-button button .arrow {
+        font-size: 1.1rem;
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 370px) {
+    .ia-button {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        padding: 0 0.8rem;
+    }
+
+    .ia-button button {
+        width: 100%;
+        max-width: 220px;
+        height: 2.6rem;
+        font-size: 0.95rem;
+        border-radius: 1.5rem;
+    }
+
+    .ia-button button .arrow {
+        font-size: 1rem;
+    }
+}
+
+/* Animation au chargement de la page */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ia-button {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* Mode sombre (optionnel) */
+@media (prefers-color-scheme: dark) {
+    .ia-button button {
+        box-shadow: 0 4px 15px rgba(249, 166, 106, 0.4),
+                    0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    .ia-button button:hover {
+        box-shadow: 0 8px 25px rgba(249, 166, 106, 0.6),
+                    0 4px 15px rgba(0, 0, 0, 0.4);
+    }
 }

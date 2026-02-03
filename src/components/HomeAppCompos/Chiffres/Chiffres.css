@@ -1,48 +1,56 @@
-/* Reset */
+/* ==================== RESET ==================== */
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
+/* ==================== SECTION ==================== */
 .chiffres-body {
   min-height: 70vh;
   background-color: #ffffff;
+  padding: 4rem 2rem;
 }
 
-
-/* Layout for the Chiffres section */
+/* ==================== MAIN GRID ==================== */
 .grid-chiffre-container {
-  
   display: grid;
-  margin-top: 5rem;
   grid-template-columns: 1fr 1fr;
-  background-size: contain;
-  color: rgb(10, 10, 10); /* or black depending on image contrast */
-  position: relative;
+  align-items: center;
+  gap: 4rem;
+  color: #0a0a0a;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==================== IMAGE ==================== */
+#img-machine {
+  display: flex;
+  justify-content: center;
 }
 
 #img-machine img {
-  margin-top: 0rem;
-  background-color: #ffffff;
-  width: 500px;
-  height: 60vh;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  max-height: 60vh;
+  object-fit: contain;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
+/* ==================== STATS GRID ==================== */
 .grid-chiffres {
-  
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin-right: 15rem;
+  gap: 4rem;
   text-align: center;
-  gap: 5rem;
-  padding: 2rem;
 }
 
+/* ==================== STAT ITEM ==================== */
 .grid-item h1 {
   font-size: 3rem;
   font-weight: bold;
   color: #222;
-  margin-bottom: 0.5rem;
 }
 
 .grid-item h3 {
@@ -50,21 +58,21 @@
   font-weight: 500;
   color: #555;
   text-transform: uppercase;
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
 }
 
-/* thin half-black, half-grey underline between h1 and h3 */
+/* ==================== UNDERLINE ==================== */
 .grid-item::after {
   content: "";
   display: block;
-  width: 150px;
+  width: 140px;
   height: 2.5px;
-  margin: 0.4rem auto;
+  margin: 0.6rem auto;
   border-radius: 5rem;
   background: linear-gradient(to right, #000 50%, #999 50%);
 }
 
-/*  Fade-in effect */
+/* ==================== FADE-IN ==================== */
 .fade-in {
   opacity: 0;
   transform: translateY(30px);
@@ -76,33 +84,69 @@
   transform: translateY(0);
 }
 
-/* Optional: slight stagger effect for smoother reveal */
+/* stagger */
 .grid-item:nth-child(1) { transition-delay: 0.1s; }
 .grid-item:nth-child(2) { transition-delay: 0.2s; }
 .grid-item:nth-child(3) { transition-delay: 0.3s; }
 .grid-item:nth-child(4) { transition-delay: 0.4s; }
 
+/* ================================================= */
+/* ================= TABLET ≤ 768px ================= */
+/* ================================================= */
+@media (max-width: 768px) {
 
-@media(max-width:770px){
-  .grid-chiffres {
+  .grid-chiffre-container {
     grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .grid-chiffres {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .grid-item h1 {
+    font-size: 2.5rem;
   }
 }
 
-@media(max-width:370px){
-  .grid-chiffre-container {
-    display: flex;
-    flex-direction: column;
-  }
+/* ================================================= */
+/* ================= MOBILE ≤ 480px ================= */
+/* ================================================= */
+@media (max-width: 480px) {
 
-  #img-machine img {
-    width: 350px;
-    margin-left: 0;
+  .chiffres-body {
+    padding: 3rem 1rem;
   }
 
   .grid-chiffres {
-    background-color: rgba(250, 235, 215, 0);
-    align-items: center;
-    margin-left: 4rem;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .grid-item h1 {
+    font-size: 2.2rem;
+  }
+
+  .grid-item h3 {
+    font-size: 1rem;
+  }
+
+  .grid-item::after {
+    width: 110px;
+  }
+}
+
+/* ================================================= */
+/* =============== SMALL PHONES ≤ 360px ============== */
+/* ================================================= */
+@media (max-width: 360px) {
+
+  .grid-item h1 {
+    font-size: 2rem;
+  }
+
+  .grid-item h3 {
+    font-size: 0.95rem;
   }
 }

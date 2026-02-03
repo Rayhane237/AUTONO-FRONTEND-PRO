@@ -1,0 +1,232 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ing-body {
+  background-color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.content {
+  width: 100%;
+}
+
+.ing-hero-section {
+  margin-top: 5rem;
+  background-color: #000000;
+  color: #ffffff;
+  min-height: 70vh;
+  padding: 5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.ing-hero-section h1 {
+  font-size: 3.5rem;
+  line-height: 1.2;
+  max-width: 1000px;
+  margin-bottom: 2rem;
+  color: #f9a66a;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.ing-hero-section h3 {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 1.8;
+  max-width: 900px;
+  margin-bottom: 3rem;
+  color: #e6e9ff;
+}
+
+/* Grid Stats Section */
+.grid-ing {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 800px;
+}
+
+.grid-i {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.grid-i:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(249, 166, 106, 0.2);
+}
+
+.grid-i h3 {
+  font-size: 1.1rem;
+  color: #f9a66a;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.underline {
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #f9a66a, #ff8c42);
+  margin: 0.8rem auto;
+  border-radius: 2px;
+}
+
+.grid-i h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Tablets et écrans moyens */
+@media (max-width: 1024px) {
+  .ing-hero-section {
+    padding: 4rem 2.5rem;
+    min-height: 65vh;
+  }
+
+  .ing-hero-section h1 {
+    font-size: 3rem;
+  }
+
+  .ing-hero-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .grid-ing {
+    gap: 3rem;
+  }
+
+  .grid-i h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Tablettes portrait */
+@media (max-width: 768px) {
+  .ing-hero-section {
+    margin-top: 4rem;
+    padding: 3.5rem 2rem;
+    min-height: 60vh;
+  }
+
+  .ing-hero-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .ing-hero-section h3 {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  .grid-ing {
+    gap: 2rem;
+    margin-top: 2.5rem;
+  }
+
+  .grid-i {
+    padding: 1.5rem;
+  }
+
+  .grid-i h3 {
+    font-size: 1rem;
+  }
+
+  .grid-i h1 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .ing-hero-section {
+    margin-top: 3rem;
+    padding: 3rem 1.5rem;
+    min-height: auto;
+  }
+
+  .ing-hero-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .ing-hero-section h3 {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .grid-ing {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .grid-i {
+    padding: 1.5rem 1rem;
+  }
+
+  .grid-i h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .underline {
+    width: 50px;
+    height: 2px;
+    margin: 0.6rem auto;
+  }
+
+  .grid-i h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Très petits écrans */
+@media (max-width: 370px) {
+  .ing-hero-section {
+    padding: 2.5rem 1rem;
+  }
+
+  .ing-hero-section h1 {
+    font-size: 1.7rem;
+  }
+
+  .ing-hero-section h3 {
+    font-size: 1rem;
+  }
+
+  .grid-ing {
+    gap: 1rem;
+  }
+
+  .grid-i {
+    padding: 1.2rem 0.8rem;
+  }
+
+  .grid-i h3 {
+    font-size: 0.9rem;
+  }
+
+  .grid-i h1 {
+    font-size: 1.3rem;
+  }
+}

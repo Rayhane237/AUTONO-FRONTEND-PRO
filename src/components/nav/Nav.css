@@ -1,36 +1,22 @@
 /* Nav.css */
-/* Navbar styles (your existing styles can remain) */
-
-/* Sliding Subscribe Section */
-.ab-bottom {
-  position: fixed;
-  bottom: -100%;
-  left: 0;
-  width: 100%;
-  background: #fff;
-  transition: bottom 0.5s;
-  z-index: 1000;
-  box-shadow: 0 -4px 8px rgba(0,0,0,0.2);
-}
-.ab-bottom.show {
-  bottom: 0;
-}
 
 /* Toast notification */
 .toast {
   position: fixed;
-  top: 5rem;               /* top of page */
-  left: 50%;               /* center horizontally */
+  margin-top: 7rem;
+  left: 50%;
   transform: translateX(-50%);
   padding: 16px 25px;
   border-radius: 8px;
   color: white;
   font-weight: bold;
-  z-index: 9999;           /* on top of everything */
+  z-index: 9999;
   box-shadow: 0 4px 12px rgba(0,0,0,0.25);
   opacity: 0;
-  pointer-events: none;     /* allow clicks through toast */
+  pointer-events: none;
   animation: slideDown 0.3s forwards, fadeOut 0.3s 2.7s forwards;
+  max-width: 90%;
+  text-align: center;
 }
 
 .toast.success {
@@ -52,39 +38,23 @@
   to { opacity: 0; }
 }
 
+/* Navbar */
 .Navbar {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   color: #ffffff;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 10000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
-.abboner-nav {
-  background-color: #15191d;
-  height: 2.2rem;
-  border-radius: 0.5rem;
-  width: 100px;
-  padding: 0.6rem;
-  padding-left: 0.9rem;
-}
-
-.btn-nav {
-  background-color: #15191d00;
-  height: 2.2rem;
-  border-radius: 0.5rem;
-  width: 90px;
-  padding: 0.6rem;
-  padding-left: 0.8rem;
-  color: #15191d;
-}
-
 
 .logo h2 {
   font-size: 1.8rem;
@@ -96,59 +66,61 @@
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 10%;
+  gap: 2rem;
   margin: 0;
   padding: 0;
   justify-content: center;
   flex: 1;
+  transition: all 0.3s ease-in-out;
 }
 
 .nav-links li {
   cursor: pointer;
   transition: color 0.3s ease;
+  color: #15191d;
 }
 
 .nav-links li:hover {
   color: #fca311;
 }
 
+.btn-nav {
+  background-color: transparent;
+  height: 2.2rem;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.8rem;
+  color: #15191d;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.abboner-nav {
+  color: #ffffff;
+  background-color: #0d1e32;
+  border: none;
+  height: 2.2rem;
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.abboner-nav:hover {
+  background-color: #fca311;
+  color: #15191d;
+}
+
 .menu-icon {
   display: none;
   font-size: 2rem;
   cursor: pointer;
+  color: #15191d;
 }
-
-/* Mobile menu hidden by default */
-.nav-links {
-  transition: all 0.3s ease-in-out;
-}
-
-@media (max-width: 888px) {
-  .nav-links {
-    position: absolute;
-    top: -100vh; /* Hide off-screen */
-    left: 0;
-    right: 0;
-    background-color: #ffffff;
-    flex-direction: column;
-    align-items: center;
-    gap: 3rem;
-    padding: 2rem 0;
-    width: 100%;
-    height: auto;
-    z-index: 999;
-  }
-
-  .nav-links.active {
-    top: 50px; /* Slide down from top */
-  }
-
-  .menu-icon {
-    display: block;
-    color: #1a1c34;
-  }
-}
-
 
 /* ==== Subscribe (Abonner) Section ==== */
 .ab-bottom {
@@ -161,8 +133,10 @@
   border-radius: 25px 25px 0 0;
   transition: bottom 0.5s ease-in-out;
   z-index: 9999;
-  padding: 2rem 1rem;
-  color: #222;
+  padding: 2rem;
+  color: #ffffff;
+  max-height: 90vh;
+  overflow-y: auto;
 }
 
 .ab-bottom.show {
@@ -170,91 +144,84 @@
 }
 
 .ab-header {
-  background-color: #fca21100;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-bottom: 2px solid rgba(212, 159, 73, 0.4);
   padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
 }
 
 .ab-header h3 {
   color: rgba(212, 159, 73, 1);
   font-size: 1.5rem;
-}
-
-.ab-content {
-  background-color: rgba(127, 255, 212, 0);
-  padding-bottom: 2rem;
+  margin: 0;
 }
 
 .close-icon {
   font-size: 1.8rem;
   cursor: pointer;
-  color: #131217;
+  color: #0c0b12;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .close-icon:hover {
   transform: scale(1.1);
-  color: rgba(212, 159, 73, 1);
+  color: rgb(73, 212, 126);
 }
 
-/* Content inside */
-.carriere-grid {
-  background-color: rgba(12, 76, 76, 0.904);
-  margin-top: 1.5rem;
-  text-align: start;
+.ab-content {
+  padding-bottom: 1rem;
 }
 
-.carriere-grid h1 {
-  color: rgba(212, 159, 73, 1);
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.carriere-grid h3 {
+.ab-content h3 {
   color: #333;
   font-weight: 400;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
 /* Input and button */
 .input-subscribe {
-  background-color: #95e59200;
   display: flex;
   flex-direction: column;
-  margin-top: -1.5rem;
-  margin-left: 27rem;
   gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .input-subscribe label {
   font-weight: bold;
   color: #444;
+  font-size: 1rem;
 }
 
 .ab-input {
-  background-color: rgba(250, 59, 59, 0);
-  width: 70%;
-  max-width: 400px;
-  padding: 0.7rem;
+  width: 100%;
+  padding: 0.8rem;
   border-radius: 8px;
   border: 1px solid #aaa;
   outline: none;
   font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.ab-input:focus {
+  border-color: rgba(212, 159, 73, 1);
 }
 
 .ab-btn {
-  background: rgb(0, 0, 0);
+  background: #0c1725;
   color: white;
   border: none;
   border-radius: 8px;
-  width: 25%;
-  height: 2.3rem;
+  width: 100%;
+  max-width: 200px;
+  height: 2.5rem;
   font-weight: 600;
   cursor: pointer;
   transition: transform 0.2s ease, background 0.2s ease;
+  align-self: flex-start;
 }
 
 .ab-btn:hover {
@@ -262,9 +229,176 @@
   background: rgb(185, 140, 65);
 }
 
-@media(max-width:370px){
+/* Tablet and smaller laptops */
+@media (max-width: 1124px) {
+  .Navbar {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 0.5rem 1.5rem;
+  }
+
+  .nav-links {
+    gap: 1.5rem;
+  }
+
   .input-subscribe {
-    margin-left: 1rem;
-    margin-top: 2rem;
+    max-width: 450px;
+  }
+}
+
+/* Mobile and tablets */
+@media (max-width: 888px) {
+  .Navbar {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+
+  .nav-links.active {
+    top: 60px;
+  }
+
+  .nav-links li {
+    width: 80%;
+    text-align: center;
+    padding: 0.5rem;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    margin-left: 80%;
+    background-color: #4caf4f00;
+  }
+
+  .btn-nav,
+  .abboner-nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .ab-bottom {
+    padding: 1.5rem;
+  }
+
+  .input-subscribe {
+    max-width: 100%;
+  }
+
+  .ab-btn {
+    max-width: 100%;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .Navbar {
+    padding: 0.8rem;
+  }
+
+  .logo h2 {
+    font-size: 1.5rem;
+  }
+
+  .menu-icon {
+    font-size: 1.8rem;
+  }
+
+  .ab-header h3 {
+    font-size: 1.3rem;
+  }
+
+  .ab-content h3 {
+    font-size: 1rem;
+  }
+
+  .ab-input {
+    font-size: 0.95rem;
+    padding: 0.7rem;
+  }
+
+  .ab-btn {
+    font-size: 0.95rem;
+    height: 2.8rem;
+  }
+
+  .toast {
+    top: 4rem;
+    font-size: 0.9rem;
+    padding: 12px 20px;
+  }
+
+  .ab-bottom {
+    padding: 1.5rem 1rem;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 370px) {
+  .menu-icon {
+    position: absolute;
+    margin-left: 18rem;
+    background-color: #4caf4f00;
+  }
+  .Navbar {
+    padding: 0.7rem;
+  }
+
+  .logo h2 {
+    font-size: 1.3rem;
+  }
+
+  .menu-icon {
+    font-size: 1.6rem;
+  }
+
+  .ab-header h3 {
+    font-size: 1.2rem;
+  }
+
+  .ab-content h3 {
+    font-size: 0.95rem;
+  }
+
+  .close-icon {
+    font-size: 1.5rem;
+  }
+
+  .ab-input {
+    font-size: 0.9rem;
+    padding: 0.6rem;
+  }
+
+  .ab-btn {
+    font-size: 0.9rem;
+    height: 2.5rem;
+  }
+
+  .ab-bottom {
+    padding: 1.2rem 0.8rem;
+  }
+
+  .input-subscribe {
+    gap: 0.8rem;
+  }
+
+  .toast {
+    font-size: 0.85rem;
+    padding: 10px 15px;
+    max-width: 95%;
   }
 }

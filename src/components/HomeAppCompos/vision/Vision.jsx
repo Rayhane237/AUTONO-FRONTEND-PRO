@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react'
 import '../HomeApp.css'
 import './Vision.css'
+ 
+
 
 const Vision = () => {
 
@@ -25,7 +27,7 @@ const Vision = () => {
     <div className='vision-content'>
       <div className='vision-grid-container'>
         <div className='v-grid fade-in' id='v-grid1'>
-          <h1>ALIVE AND WORING BRAVO </h1>
+        
           <h6 className='fade-in'>Vision</h6>
           <br />
           <h2 className='fade-in'>Nous changeons la façon dont le monde perçoit les voitures</h2>

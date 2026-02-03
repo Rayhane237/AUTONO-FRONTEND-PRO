@@ -46,7 +46,7 @@ const NavHome = () => {
           <li className='btn-nav' onClick={navThech}>Technologie</li>
           <li className='btn-nav' onClick={navApropos}>À propos</li>
           <li className='btn-nav' onClick={navCareer}>Carrières</li>
-          <li className='abboner-nav' onClick={handleAbonner}>Subscribe</li>
+          <button className='abboner-nav' onClick={handleAbonner}>S’abonner</button>
         </ul>
 
         <div className='menu-icon' onClick={() => setMenuOpen(!menuOpen)}>
@@ -58,7 +58,7 @@ const NavHome = () => {
       <div className={`ab-bottom ${abonnerOpen ? 'show' : ''}`}>
         <div className="ab-header">
           <h3>Abonnez-vous</h3>
-          <RiCloseLargeFill className="close-icon" onClick={handleAbonner} />
+          <RiCloseLargeFill className="close-icon" size="13" color="#1a1c34" onClick={handleAbonner} />
         </div>
 
         <div className="ab-content">

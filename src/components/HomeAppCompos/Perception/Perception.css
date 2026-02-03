@@ -1,49 +1,54 @@
+/* ==================== RESET ==================== */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* ==================== SECTION ==================== */
 .perception-content {
   padding: 8rem 2rem;
 }
 
+/* ==================== GRID CONTAINER ==================== */
 .perception-grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 4rem;
   color: #0b0b0b;
-  padding: 1rem;
-  margin-top: -1rem;
+  padding: 2.5rem 1rem 1rem;
   background-color: rgba(188, 75, 75, 0);
-  border-left: 2px solid #131212;
+
+  /* 🔥 TOP SEPARATOR LINE */
+  border-top: 2px solid #131212;
 }
 
+/* ==================== TEXT BLOCK ==================== */
 #p-grid1 {
-
   font-size: 2rem;
-  background-color: rgba(250, 128, 114, 0);
-  width: 35vw;
+  width: 100%;
+  max-width: 35vw;
 }
 
-
- 
- .hero-section-perception {
+/* ==================== HERO IMAGE ==================== */
+.hero-section-perception {
   background-image: url("/info6.jpg");
-   background-size: contain;
+  background-size: contain;
+  background-position: center;
   background-repeat: no-repeat;
-  margin-right: 5rem;
-  width: 530px;
+
+  width: 100%;
+  max-width: 530px;
   height: 65vh;
-  margin-top: -8rem;
+
+  margin: -6rem auto 0 auto;
   border-radius: 2rem;
   border-top-left-radius: 3rem;
   border-top-right-radius: 3rem;
-  
-} 
+}
 
-/* ------------------ Fade-in animation */
+/* ==================== FADE-IN ==================== */
 .fade-in {
   opacity: 0;
   transform: translateY(40px);
@@ -55,39 +60,70 @@
   transform: translateY(0);
 }
 
-@media(max-width:770px){
+/* ================================================= */
+/* ================= TABLET ≤ 768px ================= */
+/* ================================================= */
+@media (max-width: 768px) {
+
+  .perception-content {
+    padding: 5rem 1.5rem;
+  }
+
   .perception-grid-container {
     grid-template-columns: 1fr;
-    gap: 10rem;
+    gap: 4rem;
+
+    /* lighter line on smaller screens */
+    border-top: 1.5px solid #131212;
+    padding-top: 2rem;
   }
+
   #p-grid1 {
-    width: 90vw;
+    max-width: 100%;
+    font-size: 1.6rem;
+    text-align: center;
   }
 
   .hero-section-perception {
     height: 40vh;
+    margin: 0 auto;
   }
 }
 
+/* ================================================= */
+/* ================= MOBILE ≤ 480px ================= */
+/* ================================================= */
+@media (max-width: 480px) {
 
-@media(max-width:370px){
   .perception-content {
     padding: 3rem 1rem;
   }
+
   .perception-grid-container {
-    grid-template-columns: 1fr;
-    gap: 10rem;
-    padding-left: 0.5rem;
-    border: none;
-    background-color: rgba(255, 235, 205, 0);
+    border-top: 2px solid #3b4b5b;
+    padding-top: 1.5rem;
   }
+
   #p-grid1 {
-    padding: 0;
-    margin-right: 5rem;
-    width: 90vw;
+    font-size: 1.3rem;
   }
 
   .hero-section-perception {
-    height: 40vh;
+    height: 35vh;
+    border-radius: 1.5rem;
+  }
+}
+
+/* ================================================= */
+/* =============== SMALL PHONES ≤ 360px ============== */
+/* ================================================= */
+@media (max-width: 360px) {
+
+  #p-grid1 {
+    font-size: 1.1rem;
+  }
+
+  .hero-section-perception {
+    height: 30vh;
   }
 }

@@ -1,83 +1,78 @@
+/* ==================== RESET ==================== */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* ==================== SECTION ==================== */
 .industrie-content {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: rgb(0, 0, 0);
+  background-color: #000;
+  color: #fff;
   padding: 8rem 2rem;
-  color: aliceblue;
 }
 
-.i-img  h4{
-  padding-left: 2rem;
-  color: rgb(255, 255, 255);
-}
-
+/* ==================== HEADER ==================== */
 #i-top-text {
-   border-left: 2px solid #ffffff;
-  background-color: rgba(58, 202, 202, 0);
-  margin-bottom:5rem ;
-  padding: 1rem;
-  width: 50%;
-  height: 50vh;
+  max-width: 900px;
+  margin: 0 auto 5rem auto;
+  padding-top: 2rem;
+
+  /* 🔥 TOP SEPARATOR LINE */
+  border-top: 2px solid #fff;
 }
 
-.i-text {
- color: #ffffff;
+#i-top-text h6 {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  opacity: 0.8;
 }
 
+#i-top-text h1 {
+  font-size: 2.8rem;
+  margin: 1rem 0;
+}
 
+#i-top-text h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* ==================== GRID ==================== */
 .industrie-grid-container {
   display: grid;
-  gap: 2rem;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  margin-left: 5rem;
-  color: #ffffff;
-  padding: 1rem;
-  margin-top: -1rem;
-  background-color: rgba(148, 173, 107, 0.018);
- 
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-#i-grid1 {
-  margin-left: 2rem;
-  font-size: 2rem;
-  background-color: rgba(250, 128, 114, 0);
-  width: 40vw;
+/* ==================== PARTNER CARD ==================== */
+.i-row {
+  display: flex;
+  justify-content: center;
 }
 
-
-#i-grid2 {
-    margin-top: 21rem;
-    display: grid;
-    grid-template-columns: 1fr ;
-    gap: 4rem;
-    object-fit: cover;
+.i-img {
+  text-align: center;
 }
 
-#fade-industrie {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    
+.i-img h4 {
+  margin-bottom: 1rem;
+  font-weight: 500;
 }
 
-
- img  {
-    margin-top: 2rem;
-    margin-left: 2rem;
-  background-color: rgb(0, 0, 0);
-  width: 45%;
-  height: 16vh;
+/* ==================== LOGO ==================== */
+.i-img img {
+  width: 100%;
+  max-width: 220px;
+  height: 90px;
   object-fit: contain;
-} 
+}
 
-/* ------------------ Fade-in animation */
+/* ==================== FADE-IN ==================== */
 .fade-in {
   opacity: 0;
   transform: translateY(40px);
@@ -89,34 +84,66 @@
   transform: translateY(0);
 }
 
-@media(max-width:770px){
-  #i-top-text {
-    width: 100vw;
-    height: 30vh;
+/* ================================================= */
+/* ================= TABLET ≤ 768px ================= */
+/* ================================================= */
+@media (max-width: 768px) {
+
+  .industrie-content {
+    padding: 6rem 1.5rem;
+  }
+
+  #i-top-text h1 {
+    font-size: 2.3rem;
+  }
+
+  #i-top-text h2 {
+    font-size: 1.1rem;
+  }
+
+  .industrie-grid-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
 }
 
-@media(max-width:370px){
-  
-#i-top-text {
-  background-color: rgba(58, 202, 202, 0);
-  margin-bottom:5rem ;
-  padding: 0.4rem;
-  border: none;
-  width: 95vw;
-  
+/* ================================================= */
+/* ================= MOBILE ≤ 480px ================= */
+/* ================================================= */
+@media (max-width: 480px) {
+
+  .industrie-content {
+    padding: 4rem 1rem;
+  }
+
+  #i-top-text {
+    padding-top: 1.5rem;
+  }
+
+  #i-top-text h1 {
+    font-size: 2rem;
+  }
+
+  #i-top-text h2 {
+    font-size: 1rem;
+  }
+
+  .i-img img {
+    max-width: 180px;
+    height: 80px;
+  }
 }
 
+/* ================================================= */
+/* =============== SMALL PHONES ≤ 360px ============== */
+/* ================================================= */
+@media (max-width: 360px) {
 
-#i-top-text h1 {
-  font-size: 2.4rem;
-}
+  #i-top-text h1 {
+    font-size: 1.8rem;
+  }
 
-.industrie-grid-container {
-  margin-top: 6rem;
-  margin-left: 0rem;
-  width: 90vw;
-}
-
-
+  #i-top-text h2 {
+    font-size: 0.95rem;
+  }
 }

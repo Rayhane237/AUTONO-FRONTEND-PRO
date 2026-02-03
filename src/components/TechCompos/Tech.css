@@ -1,39 +1,105 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-.tech-hero-section  {
+.tech-hero-section {
     background-image: url("/pics-thec/why1.jpg");
     color: black;
     background-color: rgb(255, 255, 255);
-    height: 80vh;
+    min-height: 80vh;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     z-index: -100;
-    
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .tech-hero-section h1 {
     background-color: rgba(164, 197, 215, 0.411);
-    padding-top: 10rem;
+    padding: 10rem 2rem 2rem 2rem;
     text-align: center;
     font-size: 4rem;
-    height: 80vh;
-    margin-bottom: 2rem;
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    line-height: 1.2;
 }
 
+.tech-hero-section h4 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
 
-@media(max-width:770px){
+/* Tablets and smaller laptops */
+@media (max-width: 1124px) {
+    .tech-hero-section {
+        min-height: 70vh;
+    }
+
+    .tech-hero-section h1 {
+        font-size: 3.5rem;
+        padding: 8rem 2rem 2rem 2rem;
+        min-height: 70vh;
+    }
+
     .tech-hero-section h4 {
-        font-size: 0.5rem;
+        font-size: 1.3rem;
     }
 }
 
+/* Tablets */
+@media (max-width: 888px) {
+    .tech-hero-section {
+        min-height: 60vh;
+    }
 
-
-@media(max-width:370px){
     .tech-hero-section h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
+        padding: 6rem 1.5rem 2rem 1.5rem;
+        min-height: 60vh;
+    }
+
+    .tech-hero-section h4 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .tech-hero-section {
+        min-height: 50vh;
+    }
+
+    .tech-hero-section h1 {
+        font-size: 2.2rem;
+        padding: 5rem 1rem 2rem 1rem;
+        min-height: 50vh;
+    }
+
+    .tech-hero-section h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 370px) {
+    .tech-hero-section {
+        min-height: 45vh;
+    }
+
+    .tech-hero-section h1 {
+        font-size: 2rem;
+        padding: 4rem 0.8rem 2rem 0.8rem;
+        min-height: 45vh;
+    }
+
+    .tech-hero-section h4 {
+        font-size: 0.9rem;
     }
 }

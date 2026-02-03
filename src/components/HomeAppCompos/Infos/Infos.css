@@ -1,122 +1,168 @@
+/* -------------------- GLOBAL RESET -------------------- */
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
- 
+
+/* -------------------- BODY -------------------- */
 .infos-body {
-   margin-top: -1.13rem;
-  background-image: linear-gradient(to top,rgb(255, 255, 255) , rgb(255, 255, 255));
+  margin-top: -1.13rem;
+  background-image: linear-gradient(to top, #ffffff, #ffffff);
 }
 
-
+/* -------------------- CONTENT -------------------- */
 .infos-content {
-    background-color:rgb(255, 255, 255);
-    
+  background-color: #ffffff;
 }
 
+/* -------------------- GRID LAYOUT -------------------- */
 .infos-grid-container {
-    align-items: center;
-    display: grid ;
-    grid-template-columns: 1fr 1fr;
-    color: #030303;
-    padding: 1rem 0rem 0rem 0rem;
-    margin-top: -1rem;
-    background-color: rgba(255, 255, 255, 0.781);
-    border-left: #0c0c0c  2px solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  color: #030303;
+  padding: 1rem;
+  margin-top: -1rem;
+  background-color: rgba(255, 255, 255, 0.78);
+  border-left: 2px solid #0c0c0c;
 }
 
+/* -------------------- LEFT TEXT -------------------- */
 #i-grid2 {
-    width: 100%;
-    margin-top: 5rem;
-    font-size: 1.5rem;
-    background-color: rgba(65, 105, 225, 0);
-    padding-left: 2rem;
+  width: 100%;
+  margin-top: 5rem;
+  font-size: 1.5rem;
+  padding-left: 2rem;
 }
 
-h1 {
-    font-size: 2.5rem;
-    
-   
-}
+/* -------------------- RIGHT CONTENT -------------------- */
 #i-grid3 {
-    border-radius: 4rem;
-   width: 100%;
-    margin-top: 2rem;
-    font-size: 1rem;
-    object-fit: contain;
-    padding-right: 15rem;
-    padding-left: 1rem;
-   
+  width: 100%;
+  margin-top: 2rem;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 4rem;
+  object-fit: contain;
 }
 
-h3 #i-grid {
+/* -------------------- HEADINGS -------------------- */
+h1 {
+  font-size: 2.5rem;
+}
+
+h3 {
   font-size: 1rem;
 }
 
-
+/* -------------------- HERO IMAGE -------------------- */
 .info-hero-section {
   background-image: url('/info9.jpg');
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
-  margin-left: 2rem;
-  width: 550px;
-    height: 65vh;
-  margin-top: -15rem;
+
+  width: 100%;
+  max-width: 550px;
+  height: 65vh;
+
+  margin: -10rem auto 0 auto;
   border-radius: 2rem;
   border-top-left-radius: 3rem;
   border-top-right-radius: 3rem;
-  
 }
 
-/* ----------------- SCROLL FADE-IN ANIMATION  */
-
-/* Initial state: hidden and slightly pushed down */
+/* -------------------- SCROLL FADE-IN -------------------- */
 .fade-in {
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-/* Visible state: fully shown */
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-@media(max-width:770px){
+/* ===================================================== */
+/* ================= TABLET (≤ 768px) ================== */
+/* ===================================================== */
+@media (max-width: 768px) {
+
   .infos-grid-container {
-    margin-left: 1rem;
-    border-left: none;
     grid-template-columns: 1fr;
+    border-left: none;
+    padding: 1.5rem 1rem;
+  }
+
+  #i-grid2 {
+    margin-top: 2rem;
+    padding-left: 0;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  #i-grid3 {
+    text-align: center;
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
   }
 
   .info-hero-section {
-    width: 660px;
-  }
-
-  #i-grid3 h2 {
-    background-color: rgba(255, 255, 255, 0);
-    font-size: 2rem;
-    width: 700px;
-    padding-left: 1rem;
+    max-width: 100%;
+    height: 45vh;
+    margin: 2rem auto 0 auto;
   }
 }
 
-@media(max-width:370px){
-  .info-hero-section {
-    width: 400px;
-    margin-left: -4rem;
-    padding-left: 0;
-  }
-  #i-grid3 h2 {
-    padding: 0;
-    width: 87vw;
-    font-size:1.4rem ;
-  }
-  #i-grid3 h1 {
-    font-size: 2rem;
-    
+/* ===================================================== */
+/* ================= MOBILE (≤ 480px) ================== */
+/* ===================================================== */
+@media (max-width: 480px) {
+
+  .infos-body {
+    margin-top: -20rem;
   }
 
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 0.95rem;
+  }
+
+  #i-grid2 {
+    font-size: 1.1rem;
+  }
+
+  #i-grid3 {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+  }
+
+  .info-hero-section {
+    visibility: hidden;
+  }
+}
+
+/* ===================================================== */
+/* ================= SMALL PHONES (≤ 360px) ============= */
+/* ===================================================== */
+@media (max-width: 360px) {
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  #i-grid2 {
+    font-size: 1rem;
+  }
+
+  .info-hero-section {
+    height: 30vh;
+  }
 }

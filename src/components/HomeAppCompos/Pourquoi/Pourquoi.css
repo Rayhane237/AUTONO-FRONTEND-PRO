@@ -1,41 +1,42 @@
+/* ==================== RESET ==================== */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* ==================== SECTION ==================== */
 .why-content {
-  /* Parallax background effect */
-  background-image: url('/why.jpg'); /* path from public folder */
-  background-attachment: fixed;      /* 👈 makes the parallax effect */
+  background-image: url('/why.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
-  height: 100vh;                     /* Full viewport height */
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8rem 2rem;
+
+  padding: 6rem 2rem;
   color: white;
 }
 
-/* Inner content container */
+/* ==================== INNER CONTAINER ==================== */
 .why-grid-container {
-  background-color: rgba(0, 0, 0, 0.776); /* translucent box */
+  background-color: rgba(0, 0, 0, 0.78);
   border-radius: 2rem;
-  padding: 2rem;
-  width: 50%;
+  padding: 2.5rem;
+
+  width: 100%;
   max-width: 700px;
-  text-align: left;
+
   backdrop-filter: blur(4px);
   animation: fadeIn 1.2s ease-in-out;
-  margin-right: 25rem;
 }
 
+/* ==================== TEXT ==================== */
 #w-grid2 {
-  font-size: 1.5rem;
- 
+  font-size: 1.4rem;
 }
 
 #w-grid2 h1 {
@@ -44,7 +45,11 @@
   color: #ff912a;
 }
 
-/* Optional fade-in effect on load */
+#w-grid2 h5 {
+  line-height: 1.6;
+}
+
+/* ==================== FADE-IN ==================== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -56,36 +61,64 @@
   }
 }
 
+/* ================================================= */
+/* ================= TABLET ≤ 768px ================= */
+/* ================================================= */
+@media (max-width: 768px) {
 
-@media(max-width:770px){
-  .why-grid-container {
-    width: 80vw;
-    margin-left: 20rem;
+  .why-content {
+    padding: 5rem 1.5rem;
+    background-attachment: scroll; /* 🔥 disable parallax on mobile */
   }
+
+  .why-grid-container {
+    padding: 2rem;
+    border-radius: 1.8rem;
+  }
+
   #w-grid2 {
-    width: 70vw;
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  #w-grid2 h1 {
+    font-size: 2.1rem;
   }
 }
 
+/* ================================================= */
+/* ================= MOBILE ≤ 480px ================= */
+/* ================================================= */
+@media (max-width: 480px) {
 
-@media(max-width:370px){
   .why-content {
-    height: 250vh;
+    padding: 3rem 1rem;
   }
+
   .why-grid-container {
-    background-color: #ff912a00;
-    width: 100vw;
-    margin-left: 15rem;
-    height: 60vh;
-    align-items: center;
+    padding: 1.5rem;
+    border-radius: 1.5rem;
   }
+
   #w-grid2 {
-    background-color: rgba(0, 0, 0, 0.769);
-    width: 95vw;
-    padding: 1rem;
-    font-size: 1.4rem;
-    margin-top: -9rem;
-    margin-left: 3.5rem;
-    border-radius: 1rem;
+    font-size: 1.1rem;
+  }
+
+  #w-grid2 h1 {
+    font-size: 1.7rem;
+  }
+}
+
+/* ================================================= */
+/* =============== SMALL PHONES ≤ 360px ============== */
+/* ================================================= */
+@media (max-width: 360px) {
+
+  #w-grid2 {
+    font-size: 1rem;
+  }
+
+  #w-grid2 h1 {
+    font-size: 1.5rem;
   }
 }

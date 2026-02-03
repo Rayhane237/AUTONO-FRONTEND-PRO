@@ -3,213 +3,159 @@
     margin: 0;
     box-sizing: border-box;
 }
- 
-.toast {
-  position: fixed;
-  top: 20px;               
-  left: 50%;              
-  transform: translateX(-50%);
-  padding: 16px 25px;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-  z-index: 9999;           
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-  opacity: 0;
-  pointer-events: none;     
-  animation: slideDown 0.3s forwards, fadeOut 0.3s 2.7s forwards;
-}
-
-.toast.success {
-  background-color: #4caf50;
-}
-
-.toast.error {
-  background-color: #f44336;
-}
-
-@keyframes slideDown {
-  from { transform: translateX(-50%) translateY(-50px); opacity: 0; }
-  to { transform: translateX(-50%) translateY(0); opacity: 1; }
-}
-
-@keyframes fadeOut {
-  from { opacity: 1; }
-  to { opacity: 0; }
-}
 
 .carriere-body {
-  height: 100vh;
-  background-color:  rgb(255, 255, 255);
- 
+    min-height: 100vh;
+    background-color: #fff;
+    font-family: sans-serif;
+    overflow-x: hidden;
 }
 
 .carriere-content {
-    background-color:rgba(255, 255, 255, 0.911);
-    padding: 8rem 2rem;
-    height: 50vh;
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .carriere-grid-container {
-    align-items: center;
-    display: grid ;
-    gap: 1rem;
-    grid-template-columns: 1fr  1fr;
-    color: #030303;
-    padding: 1rem 0rem 0rem 0rem;
-    margin-top: -1rem;
-    height: 60vh;
-    background-color: rgb(255, 255, 255);
-    border-left: #000000  2px solid;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+    border-left: #000 2px solid;
+    padding-left: 2rem;
 }
 
-#carriere-grid1 {
-    margin-left: 2rem;
-    font-size: 2rem;
-    background-color: rgba(167, 20, 216, 0.781);
-    width: 40vw;
-}
+/* Info Section */
 #carriere-grid2 {
-    font-size: 1.5rem;
-    background-color: rgba(240, 169, 169, 0);
-    padding-left: 2rem;
-    margin-bottom: 15rem;
-   color: #000000;
+    font-size: 1.2rem;
+    color: #000;
 }
-#carr-grid3 {
-    background-color: rgba(232, 73, 73, 0);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.792); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding: 3rem;
-    margin-bottom: 10rem;
-    border: 2px rgb(205, 156, 76) solid;
-    border-radius: 2rem;
-    object-fit: contain;
-    padding-left: 2rem;
-    height: 50vh;
-    color: rgb(0, 0, 0);
-    width: 80%;
-   
-}
-.abonner-btn {
-    width: 100px;
-    height: 2.5rem;
-    border-radius: 0.5rem;
-    border: none;
-    color: #ffffff;
-    background-color: black;
-}
-.abonner-btn:hover {
-      color: #ffffff;
-    background-color: rgb(132, 69, 5);
-}
-.abonner {
-    width: 68%;
-    height: 2.5rem;
-    border-top-left-radius: 0.5rem;
-    border-bottom-left-radius:0.5rem ;
-    border:  1px black solid;
-}
-.carr-list {
-    display: flex;
-    font-size: 1.5rem;
-    justify-content: flex-start;
-    gap: 2rem;
-    background-color: rgba(194, 229, 252, 0);
-    flex-wrap: wrap;
-    
-    
-}
+
 #carr-auto {
     font-weight: 800;
-    
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.5rem;
+    font-family: Verdana, Geneva, sans-serif;
+}
 
+.carr-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
 
+/* Subscription Card */
+#carr-grid3 {
+    background-color: #fff;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); 
+    padding: 2.5rem;
+    border: 2px rgb(205, 156, 76) solid;
+    border-radius: 2rem;
+    transition: transform 0.3s ease;
+}
+
+#carr-grid3:hover {
+    transform: translateY(-5px);
+}
+
+.input-sub {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.abonner {
+    flex: 1;
+    min-width: 200px;
+    height: 3rem;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    border: 1px black solid;
+}
+
+.abonner-btn {
+    padding: 0 1.5rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    border: none;
+    color: #fff;
+    background-color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.abonner-btn:hover {
+    background-color: rgb(132, 69, 5);
+}
+
+/* Footer Section */
+.email-me {
+    grid-column: 1 / -1; /* Spans across both columns */
+    margin-top: 4rem;
+    padding: 2rem 0;
+    border-top: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .insta-icon {
-    font-size: 1.8rem;
-   color: rgb(128, 100, 179);
+    font-size: 2rem;
+    color: rgb(128, 100, 179);
 }
 
-.email-me {
-    position: relative;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.386);
-    margin-left: 10rem;
-    display: flex;
-    gap: 5%;
-    margin-bottom: 10rem;
-}
-/* ----------------- SCROLL FADE-IN ANIMATION  */
-
-/* Initial state: hidden and slightly pushed down */
-.fade-in {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+/* Toast Styles */
+.toast {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 16px 25px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    animation: slideDown 0.3s forwards;
 }
 
-/* Visible state: fully shown */
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+.toast.success { background-color: #4caf50; }
+.toast.error { background-color: #f44336; }
+
+@keyframes slideDown {
+    from { transform: translateX(-50%) translateY(-50px); opacity: 0; }
+    to { transform: translateX(-50%) translateY(0); opacity: 1; }
 }
 
-@media(max-width:770px){
+/* --- RESPONSIVE DESIGN --- */
+
+@media (max-width: 900px) {
     .carriere-grid-container {
         grid-template-columns: 1fr;
-        gap: 0rem;
-        border: none;
-       
-    }
-
-    #carr-grid3 {
-        background-color: rgba(0, 0, 255, 0);
-        height: 30vh;
-        margin-top: -90px;
-        margin-left: 5rem;
+        border-left: none;
+        padding-left: 0;
     }
     
+    #carr-auto { font-size: 2rem; }
 }
 
-@media(max-width:370px){
-     #carr-grid3 {
-        background-color: rgba(27, 141, 202, 0);
-        height: 50vh;
-        width: 300px;
-        margin-top: -90px;
-        margin-left: -0.1rem;
-        padding: 1rem 1rem;
+@media (max-width: 480px) {
+    .carriere-content { padding: 2rem 1rem; }
+    #carr-grid3 { padding: 1.5rem; }
+    .email-me { flex-direction: column; text-align: center; }
+}
 
-    }
-    
-    
-     #carriere-grid2 {
-       font-size: 1rem;
-       align-items: flex-start;
-       padding-left: 0.8rem;
-       margin-right: 2rem;
-       background-color: rgba(127, 255, 212, 0);
-       
-    }
-
-    .carr-list {
-     margin-right: 1rem;
-     border-radius: 1rem;
-     width: 300px;
-     background-color: rgba(255, 246, 240, 0.788);
-    }
-
-    .abonner-btn {
-        width: 80px;
-    }
-
-    #email-lili {
-        padding-top: -10rem;
-        background-color: rgba(255, 255, 255, 0);
-        margin-left: 2rem;
-    }
-
+/* Scroll Animation classes */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

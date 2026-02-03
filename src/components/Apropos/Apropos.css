@@ -1,48 +1,123 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-.ap-hero-section  {
+.apropos-page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.apropos-sections {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.ap-hero-section {
     background-image: url("/pics-thec");
     color: rgb(50, 74, 131);
     background-color: rgb(255, 255, 255);
-    height: 80vh;
+    min-height: 80vh;
     background-size: cover;
-    z-index: -100;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
     border-bottom: 1px black solid;
-    
-
+    padding: 2rem;
+    width: 100%;
 }
+
 .ap-hero-section h3 {
     margin: 4rem;
-    
     font-size: 1.6rem;
     background-color: rgb(255, 255, 255);
-
+    line-height: 1.6;
 }
-.ap-hero-section h1  {
+
+.ap-hero-section h3 span {
+    font-weight: bold;
+    color: rgb(50, 74, 131);
+}
+
+.ap-hero-section h1 {
     background-color: rgb(255, 255, 255);
     padding-top: 10rem;
     text-align: center;
     font-size: 4rem;
-   
     margin-bottom: 2rem;
 }
 
-@media(max-width:370px){
-     .ap-hero-section {  
-      
+/* Tablets and smaller laptops */
+@media (max-width: 1124px) {
+    .ap-hero-section {
+        min-height: 70vh;
+    }
+
+    .ap-hero-section h1 {
+        font-size: 3.5rem;
+        padding-top: 8rem;
+    }
+
+    .ap-hero-section h3 {
+        font-size: 1.4rem;
+        margin: 3rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 888px) {
+    .ap-hero-section {
+        min-height: auto;
+        padding: 2rem 1.5rem;
+    }
+
+    .ap-hero-section h1 {
+        font-size: 3rem;
+        padding-top: 6rem;
+    }
+
+    .ap-hero-section h3 {
+        font-size: 1.3rem;
+        margin: 2rem;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .ap-hero-section {
+        padding: 2rem 1rem;
+    }
+
+    .ap-hero-section h1 {
+        font-size: 2.5rem;
+        padding-top: 5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .ap-hero-section h3 {
+        font-size: 1.1rem;
+        margin: 1.5rem;
+    }
+}
+
+/* Very small devices */
+@media (max-width: 370px) {
+    .ap-hero-section {
         background-color: rgb(255, 255, 255);
-        height: 190vh;
-     }
+        min-height: auto;
+        padding: 2rem 0.8rem;
+    }
 
-     .ap-hero-section h1 {
+    .ap-hero-section h1 {
         font-size: 2rem;
-     }
+        padding-top: 4rem;
+    }
 
-     .ap-hero-section h3 {
+    .ap-hero-section h3 {
         margin: 1.4rem;
-     }
-
+        font-size: 1rem;
+    }
 }

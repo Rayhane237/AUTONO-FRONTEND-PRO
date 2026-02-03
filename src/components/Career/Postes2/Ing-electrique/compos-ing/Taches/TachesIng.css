@@ -1,58 +1,222 @@
 * {
   margin: 0;
   padding: 0;
- 
+  box-sizing: border-box;
 }
 
 .taches-body {
-  border-top:1px  #222 solid;
-  padding: 0rem;
-  background-color: #f7f7f700;
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f9fa 100%);
   color: #222;
   min-height: 80vh;
+  padding: 0;
+  border-top: 2px solid #f9a66a;
+  position: relative;
+}
+
+.taches-body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(249, 166, 106, 0.1) 0%, transparent 70%);
+  pointer-events: none;
 }
 
 .taches-body h1 {
-  padding:3rem 2rem;
-  border-bottom: 1px black solid;
-  text-align: start;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-  
+  padding: 4rem 3rem;
+  border-bottom: 2px solid #f9a66a;
+  text-align: left;
+  margin-bottom: 3rem;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  position: relative;
+}
+
+.taches-body h1::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 3rem;
+  width: 150px;
+  height: 2px;
+  background: linear-gradient(90deg, #f9a66a, transparent);
 }
 
 .taches-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  padding: 0 3rem 4rem;
 }
 
-
-
 .list-ul-list {
-  list-style-type: disc;
-  padding-left: 2rem;
-  width: 45%;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.list-ul-list:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(249, 166, 106, 0.15);
 }
 
 .list-ul-list li {
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  padding-left: 2rem;
+  position: relative;
+  line-height: 1.8;
+}
+
+.list-ul-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #f9a66a;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .list-ul-list h3 {
-  font-size: 1rem;
-  font-weight: normal;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #333;
+  line-height: 1.7;
 }
 
-/* --- Effet fade-in --- */
+/* Effet fade-in amélioré */
 .fade-in-li {
   opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease-out;
+  transform: translateY(30px);
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fade-in-li.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .taches-body h1 {
+    font-size: 2.4rem;
+    padding: 3.5rem 2.5rem;
+  }
+
+  .taches-body h1::after {
+    left: 2.5rem;
+    width: 120px;
+  }
+
+  .taches-container {
+    gap: 2.5rem;
+    padding: 0 2.5rem 3.5rem;
+  }
+
+  .list-ul-list {
+    padding: 1.8rem;
+  }
+
+  .list-ul-list h3 {
+    font-size: 1.05rem;
+  }
+}
+
+/* Tablettes portrait */
+@media (max-width: 768px) {
+  .taches-body h1 {
+    font-size: 2rem;
+    padding: 3rem 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .taches-body h1::after {
+    left: 2rem;
+    width: 100px;
+  }
+
+  .taches-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 2rem 3rem;
+  }
+
+  .list-ul-list {
+    padding: 1.5rem;
+  }
+
+  .list-ul-list li {
+    margin-bottom: 1.2rem;
+  }
+
+  .list-ul-list h3 {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .taches-body h1 {
+    font-size: 1.8rem;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .taches-body h1::after {
+    left: 1.5rem;
+    width: 80px;
+  }
+
+  .taches-container {
+    padding: 0 1.5rem 2.5rem;
+    gap: 1.5rem;
+  }
+
+  .list-ul-list {
+    padding: 1.2rem;
+  }
+
+  .list-ul-list li {
+    padding-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .list-ul-list h3 {
+    font-size: 0.95rem;
+  }
+}
+
+/* Très petits écrans */
+@media (max-width: 370px) {
+  .taches-body h1 {
+    font-size: 1.5rem;
+    padding: 2rem 1rem;
+  }
+
+  .taches-body h1::after {
+    left: 1rem;
+    width: 60px;
+  }
+
+  .taches-container {
+    padding: 0 1rem 2rem;
+  }
+
+  .list-ul-list {
+    padding: 1rem;
+  }
+
+  .list-ul-list li {
+    padding-left: 1.2rem;
+  }
+
+  .list-ul-list h3 {
+    font-size: 0.9rem;
+  }
 }

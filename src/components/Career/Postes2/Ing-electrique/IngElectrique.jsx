@@ -5,48 +5,51 @@ import TachesIng from './compos-ing/Taches/TachesIng';
 import VotreIdentitee from './compos-ing/Identitee/VotreIdentitee';
 import Carriere from "../../../HomeAppCompos/Carriere/Carriere"
 
-
 const IngElectrique = () => {
   return (
-   <div className='ing-body'>
-      <div className='content'>
-        <div className='NavHome'>
-          <NavHome />
-        </div>
-         
-        <div className='ing-hero-section'>
-               <h1>INGÉNIEUR ÉLECTRICIEN</h1>
-               <h3>
-                Rejoignez AUTONO et participez à l’avenir de la mobilité autonome. En tant qu’ingénieur électricien, vous concevrez des systèmes intelligents qui allient innovation, performance et durabilité pour propulser la voiture du futur.
-               </h3>
+    <div className='ing-body'>
+      {/* Navigation */}
+      <div className='NavHome'>
+        <NavHome />
+      </div>
+      
+      {/* Hero Section */}
+      <section className='ing-hero-section'>
+        <h1>INGÉNIEUR ÉLECTRICIEN</h1>
+        <h3>
+          Rejoignez AUTONO et participez à l'avenir de la mobilité autonome. En tant qu'ingénieur électricien, vous concevrez des systèmes intelligents qui allient innovation, performance et durabilité pour propulser la voiture du futur.
+        </h3>
 
-               
-        {/* Stats section */}
-        <div className='grid-ing '>
-          <div className='grid-i '>
+        {/* Stats Grid */}
+        <div className='grid-ing'>
+          <div className='grid-i'>
             <h3>Emplacement</h3>
             <div className="underline"></div>
-            <h1>Paris,France</h1>
+            <h1>Paris, France</h1>
           </div>
 
-      
-          <div className='grid-i '>
-            <h3>Type D’emploi </h3>
+          <div className='grid-i'>
+            <h3>Type D'emploi</h3>
             <div className="underline"></div>
             <h1>Permanent</h1>
           </div>
-
         </div>
+      </section>
 
-           
-        </div>
-           <TachesIng />
+      {/* Tâches Section */}
+      <section className='taches-section'>
+        <TachesIng />
+      </section>
 
-          <VotreIdentitee /> 
+      {/* Identité Section */}
+      <section className='identite-section'>
+        <VotreIdentitee />
+      </section>
 
-          <Carriere />
-      </div>
-     
+      {/* Carrière Footer Section */}
+      <section className='carriere-section'>
+        <Carriere />
+      </section>
     </div>
   )
 }

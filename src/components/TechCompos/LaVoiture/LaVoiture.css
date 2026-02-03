@@ -5,8 +5,9 @@
 }
 
 .voiture-content {
-    background:#050817;
+  background: #050817;
   padding: 8rem 2rem;
+  min-height: 100vh;
 }
 
 .voi-grid-container {
@@ -21,30 +22,34 @@
   border-left: 2px solid #ffffff;
 }
 
-#voi-grid1  {
+#voi-grid1 {
   margin-left: 1.2rem;
   font-size: 1.8rem;
   background-color: rgba(11, 8, 32, 0.112);
-  width: 40vw;
-  height: 50vh;
+  width: 100%;
+  max-width: 40vw;
+  min-height: 50vh;
+  height: auto;
 }
 
-#voi-grid2 ,#voi-grid3 {
+#voi-grid2,
+#voi-grid3 {
   object-fit: contain;
   background-color: rgba(142, 193, 193, 0);
 }
 
 #hero-voiture-section {
   background-image: url("/pics-thec/thech3.jpg");
-    background-size: cover;
+  background-size: cover;
   background-repeat: no-repeat;
-  width: 610px;
-    height: 65vh;
+  background-position: center;
+  width: 100%;
+  max-width: 610px;
+  min-height: 65vh;
   margin-top: -2rem;
   border-radius: 2rem;
-  
-
 }
+
 /* ------------------ Fade-in animation */
 .fade-in {
   opacity: 0;
@@ -57,139 +62,170 @@
   transform: translateY(0);
 }
 
-@media(max-width:770px){
-  .voi-grid-container {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    padding-left: 2rem;
-  }
-
+/* Tablets and smaller laptops */
+@media (max-width: 1124px) {
   .voiture-content {
-    height: 150vh;
-    padding-left: 2rem;
+    padding: 6rem 1.5rem;
   }
- 
+
+  .voi-grid-container {
+    gap: 3rem;
+  }
+
+  #voi-grid1 {
+    max-width: 45vw;
+    font-size: 1.6rem;
+    margin-left: 1rem;
+  }
+
   #hero-voiture-section {
-    width: 650px;
-    height: 50vh;
-    margin-top: 0rem;
-
+    max-width: 550px;
+    min-height: 60vh;
   }
-   #voi-grid1 {
-    
-    width: 100vw;
-    height: 40vh;
-    margin-top: -3rem;
-   
-  }
-
-  #voi-grid3 {
-    margin-top: 3rem;
-  }
-  
-  #voi-grid3 h1 {
-    padding-left: 0;
-    font-size: 1.7rem;
-    width: 90vw;
-  }
-
-
-
-  #voi-grid3 h4 {
-    font-size: 1.3rem;
-    width: 90vw;
-  }
-
-
-  #voi-grid2 {
-    margin-top: 3rem;
-  }
-
-  
-  #voi-grid2 h1 {
-    font-size: 1.7rem;
-    width: 90vw;
-
-  }
-
-  
-  #voi-grid2 h4 {
-    font-size: 1.5rem;
-    width: 90vw;
-  }
-
-
 }
 
-@media (max-width: 370px) {
-  
+/* Tablets */
+@media (max-width: 888px) {
   .voiture-content {
-    height: 310vh;
-    padding-left: 0rem;
+    padding: 5rem 1.5rem;
+    min-height: auto;
+  }
+
+  .voi-grid-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    border-left: none;
+    border-top: 2px solid #ffffff;
+    padding-top: 2rem;
+    padding-left: 0;
+  }
+
+  #voi-grid1 {
+    max-width: 100%;
+    width: 100%;
+    margin-left: 0;
+    font-size: 1.5rem;
+    min-height: 40vh;
+    margin-top: 0;
+  }
+
+  #voi-grid1 h1 {
+    font-size: 1.8rem;
+  }
+
+  #voi-grid1 h3 {
+    font-size: 1.5rem;
+  }
+
+  #hero-voiture-section {
+    max-width: 100%;
+    min-height: 50vh;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+
+  #voi-grid2,
+  #voi-grid3 {
+    margin-top: 2rem;
+  }
+
+  #voi-grid2 h1,
+  #voi-grid3 h1 {
+    font-size: 1.8rem;
+    width: 100%;
+  }
+
+  #voi-grid2 h4,
+  #voi-grid3 h4 {
+    font-size: 1.4rem;
+    width: 100%;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .voiture-content {
+    padding: 4rem 1rem;
   }
 
   .voi-grid-container {
     gap: 2rem;
+    padding: 1rem 0.5rem;
   }
 
-   #hero-voiture-section {
-    width: 370px;
-    height: 35vh;
-    margin-top: 15rem;
-
-  }
- 
-    #voi-grid1 {
-    width: 96vw;
-    height: 38vh;
-    margin-top: -3rem;
-    padding-left: 0;
-    margin: 0;
-   
-  }
-  #voi-grid1 h3 {
-    font-size: 1.7rem;
-    width: 90vw;
+  #voi-grid1 {
+    font-size: 1.3rem;
+    min-height: 35vh;
   }
 
   #voi-grid1 h1 {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
   }
 
-  #voi-grid3 {
-    margin-top: 15rem;
-  }
-  
-  #voi-grid3 h1 {
-    padding-left: 0;
-    font-size: 1.7rem;
-    width: 90vw;
-  }
-
-
-
-  #voi-grid3 h4 {
+  #voi-grid1 h3 {
     font-size: 1.3rem;
-    width: 90vw;
   }
 
-
-  #voi-grid2 {
-    margin-top: 3rem;
+  #hero-voiture-section {
+    min-height: 45vh;
+    border-radius: 1.5rem;
+    margin-top: 1.5rem;
   }
 
-  
-  #voi-grid2 h1 {
-    font-size: 1.7rem;
-    width: 90vw;
-
+  #voi-grid2 h1,
+  #voi-grid3 h1 {
+    font-size: 1.6rem;
   }
 
-  
-  #voi-grid2 h4 {
+  #voi-grid2 h4,
+  #voi-grid3 h4 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 370px) {
+  .voiture-content {
+    padding: 3rem 0.8rem;
+  }
+
+  .voi-grid-container {
+    gap: 1.5rem;
+  }
+
+  #voi-grid1 {
+    font-size: 1.2rem;
+    min-height: 30vh;
+    padding: 1rem;
+  }
+
+  #voi-grid1 h1 {
     font-size: 1.5rem;
-    width: 90vw;
   }
 
+  #voi-grid1 h3 {
+    font-size: 1.2rem;
+  }
 
+  #hero-voiture-section {
+    min-height: 40vh;
+    border-radius: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  #voi-grid2,
+  #voi-grid3 {
+    margin-top: 1.5rem;
+  }
+
+  #voi-grid2 h1,
+  #voi-grid3 h1 {
+    font-size: 1.5rem;
+    padding-left: 0;
+  }
+
+  #voi-grid2 h4,
+  #voi-grid3 h4 {
+    font-size: 1.1rem;
+  }
 }

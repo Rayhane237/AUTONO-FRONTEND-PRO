@@ -6,23 +6,49 @@
 
 .huge-background {
   /* Parallax background effect */
-  background-image: url('/pics-thec/perfect-huge.jpg'); /* path from public folder */
-  background-attachment: fixed;      /*  makes the parallax effect */
+  background-image: url('/pics-thec/perfect-huge.jpg');
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  height: 100vh;                     /* Full viewport height */
+  
+  min-height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 8rem 2rem;
   color: white;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Optional overlay for better text readability */
+.huge-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
 
+.huge-background > * {
+  position: relative;
+  z-index: 2;
+}
 
-/* Optional fade-in effect on load */
+/* Content styling for better quality */
+.huge-background h1,
+.huge-background h2,
+.huge-background p {
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 1.2s ease-out;
+}
+
+/* Fade-in effect on load */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -31,5 +57,100 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Tablets and smaller laptops */
+@media (max-width: 1124px) {
+  .huge-background {
+    padding: 6rem 2rem;
+    min-height: 90vh;
+  }
+}
+
+/* Tablets - Disable parallax for better performance */
+@media (max-width: 888px) {
+  .huge-background {
+    background-attachment: scroll; /* Disable parallax on tablets */
+    padding: 5rem 1.5rem;
+    min-height: 80vh;
+  }
+
+  .huge-background h1 {
+    font-size: 2.5rem;
+  }
+
+  .huge-background h2 {
+    font-size: 1.8rem;
+  }
+
+  .huge-background p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile devices - Disable parallax and optimize */
+@media (max-width: 480px) {
+  .huge-background {
+    background-attachment: scroll; /* Disable parallax on mobile */
+    background-position: center center;
+    padding: 4rem 1rem;
+    min-height: 70vh;
+  }
+
+  .huge-background::before {
+    background: rgba(0, 0, 0, 0.4); /* Slightly darker overlay for readability */
+  }
+
+  .huge-background h1 {
+    font-size: 2rem;
+  }
+
+  .huge-background h2 {
+    font-size: 1.5rem;
+  }
+
+  .huge-background p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 370px) {
+  .huge-background {
+    background-attachment: scroll;
+    padding: 3rem 0.8rem;
+    min-height: 60vh;
+  }
+
+  .huge-background h1 {
+    font-size: 1.8rem;
+  }
+
+  .huge-background h2 {
+    font-size: 1.3rem;
+  }
+
+  .huge-background p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
+/* High-resolution displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .huge-background {
+    background-image: url('/pics-thec/perfect-huge.jpg');
+    /* You can add a higher resolution image here if available */
+    /* background-image: url('/pics-thec/perfect-huge@2x.jpg'); */
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 888px) and (orientation: landscape) {
+  .huge-background {
+    min-height: 100vh;
+    padding: 3rem 2rem;
   }
 }
