@@ -6,7 +6,7 @@
 
 .identitee-body {
   background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
-  color: #ffffff;
+  color: #f6f1f1;
   min-height: 100vh;
   padding: 0;
   border-top: 1px solid #333;
@@ -27,19 +27,18 @@
   pointer-events: none;
 }
 
+/* FIX PRINCIPAL : Titre visible */
 .identitee-body h1 {
-  color: #ffffff;
+  color: #f9a66a; /* Couleur solide au lieu de gradient transparent */
   padding: 4rem 3rem;
   margin-bottom: 3rem;
   font-size: 2.8rem;
   font-weight: 700;
   border-bottom: 2px solid #f9a66a;
-  background: linear-gradient(90deg, #f9a66a, #ff8c42);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
   position: relative;
   z-index: 1;
+  text-transform: capitalize;
+  /* Supprimé les propriétés background-clip qui causaient le problème */
 }
 
 .identitee-container {
@@ -73,11 +72,13 @@
   font-weight: bold;
 }
 
-.list-ul-list h3 {
+/* FIX : Utiliser h2 au lieu de h3 comme dans le JSX */
+.list-ul-list h2 {
   font-size: 1.1rem;
   font-weight: 400;
-  color: #e6e9ff;
+  color: #07091c;
   line-height: 1.7;
+  margin-bottom: 0.8rem;
 }
 
 /* Effet fade-in amélioré */
@@ -92,12 +93,12 @@
   transform: translateY(0);
 }
 
-/* Bouton centré et stylisé */
-.iden-btn-container {
+/* Container du bouton (classe .iden dans le JSX) */
+.iden {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 3rem 0;
+  padding: 3rem 0 4rem;
   position: relative;
   z-index: 1;
 }
@@ -119,7 +120,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  gap: 0.8rem;
 }
 
 .iden-btn::before {
@@ -143,12 +144,13 @@
   background: linear-gradient(135deg, #ff8c42, #f9a66a);
 }
 
-.arrow {
-  font-size: 1.2rem;
+/* Classe .arr pour l'icône dans le JSX */
+.arr {
+  font-size: 1.1rem;
   transition: transform 0.3s ease;
 }
 
-.iden-btn:hover .arrow {
+.iden-btn:hover .arr {
   transform: translateX(5px);
 }
 
@@ -164,7 +166,7 @@
     padding: 0 2.5rem 3.5rem;
   }
 
-  .list-ul-list h3 {
+  .list-ul-list h2 {
     font-size: 1.05rem;
   }
 
@@ -192,7 +194,7 @@
     margin-bottom: 1.2rem;
   }
 
-  .list-ul-list h3 {
+  .list-ul-list h2 {
     font-size: 1rem;
   }
 
@@ -200,6 +202,10 @@
     width: 180px;
     height: 2.8rem;
     font-size: 1rem;
+  }
+
+  .iden {
+    padding: 2.5rem 0 3.5rem;
   }
 }
 
@@ -220,7 +226,7 @@
     margin-bottom: 1rem;
   }
 
-  .list-ul-list h3 {
+  .list-ul-list h2 {
     font-size: 0.95rem;
   }
 
@@ -231,8 +237,8 @@
     font-size: 1rem;
   }
 
-  .iden-btn-container {
-    padding: 2.5rem 1.5rem;
+  .iden {
+    padding: 2.5rem 1.5rem 3rem;
   }
 }
 
@@ -251,7 +257,7 @@
     padding-left: 1.2rem;
   }
 
-  .list-ul-list h3 {
+  .list-ul-list h2 {
     font-size: 0.9rem;
   }
 
@@ -260,4 +266,24 @@
     max-width: 220px;
     font-size: 0.95rem;
   }
+
+  .iden {
+    padding: 2rem 1rem 2.5rem;
+  }
+}
+
+/* Animation au chargement */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.identitee-body h1 {
+  animation: fadeInDown 0.8s ease-out;
 }

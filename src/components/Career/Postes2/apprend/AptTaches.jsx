@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-
+import "./Apprendre.css";
 const TachesApt = () => {
   useEffect(() => {
     const items = document.querySelectorAll(".fade-in-li");

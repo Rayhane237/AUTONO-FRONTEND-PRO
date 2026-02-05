@@ -7,28 +7,30 @@
 .carriere-body {
     min-height: 100vh;
     background-color: #fff;
-    font-family: sans-serif;
+    font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
+    width: 100%;
 }
 
 .carriere-content {
-    padding: 4rem 1rem;
-    max-width: 1200px;
+    padding: 4rem 2rem;
+    max-width: 1400px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .carriere-grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 3rem;
     align-items: start;
-    border-left: #000 2px solid;
-    padding-left: 2rem;
+    border-left: 2px solid #000;
+    padding-left: 3rem;
 }
 
 /* Info Section */
 #carriere-grid2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #000;
 }
 
@@ -36,13 +38,28 @@
     font-weight: 800;
     font-size: 2.5rem;
     font-family: Verdana, Geneva, sans-serif;
+    margin-bottom: 1.5rem;
+}
+
+.crrieres-lists {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .carr-list {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin-bottom: 1.5rem;
+}
+
+.carr-list h4 {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.carr-list div {
+    line-height: 1.6;
 }
 
 /* Subscription Card */
@@ -50,7 +67,7 @@
     background-color: #fff;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); 
     padding: 2.5rem;
-    border: 2px rgb(205, 156, 76) solid;
+    border: 2px solid rgb(205, 156, 76);
     border-radius: 2rem;
     transition: transform 0.3s ease;
 }
@@ -59,53 +76,127 @@
     transform: translateY(-5px);
 }
 
+#carr-grid3 h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+#carr-grid3 h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
 .input-sub {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-sub h5 {
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .abonner {
-    flex: 1;
-    min-width: 200px;
+    width: 100%;
     height: 3rem;
     padding: 0 1rem;
     border-radius: 0.5rem;
-    border: 1px black solid;
+    border: 1px solid black;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.abonner:focus {
+    outline: none;
+    border-color: rgb(205, 156, 76);
 }
 
 .abonner-btn {
-    padding: 0 1.5rem;
+    width: 100%;
     height: 3rem;
     border-radius: 0.5rem;
     border: none;
     color: #fff;
     background-color: black;
     cursor: pointer;
-    transition: 0.3s;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    font-weight: 600;
 }
 
 .abonner-btn:hover {
     background-color: rgb(132, 69, 5);
+    transform: translateY(-2px);
 }
 
 /* Footer Section */
 .email-me {
-    grid-column: 1 / -1; /* Spans across both columns */
-    margin-top: 4rem;
+    grid-column: 1 / -1;
+    margin-top: 3rem;
     padding: 2rem 0;
-    border-top: 1px solid #eee;
+    border-top: 1px solid #ddd;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem;
+}
+
+.email-me h3 {
+    font-size: 1rem;
+    font-weight: 400;
+    word-break: break-word;
+}
+
+.email-me a {
+    color: #000;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.email-me a:hover {
+    color: rgb(205, 156, 76);
+}
+
+/* Social Icons Container */
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.linkedin-icon {
+    font-size: 2rem;
+    color: #0077b5;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.linkedin-icon:hover {
+    transform: scale(1.15);
+    color: #005885;
+}
+
+.github-icon {
+    font-size: 2rem;
+    color: #333;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.github-icon:hover {
+    transform: scale(1.15);
+    color: #000;
 }
 
 .insta-icon {
     font-size: 2rem;
-    color: rgb(128, 100, 179);
+    color: #E4405F;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.insta-icon:hover {
+    transform: scale(1.15);
+    color: #C13584;
 }
 
 /* Toast Styles */
@@ -131,31 +222,204 @@
     to { transform: translateX(-50%) translateY(0); opacity: 1; }
 }
 
-/* --- RESPONSIVE DESIGN --- */
-
-@media (max-width: 900px) {
-    .carriere-grid-container {
-        grid-template-columns: 1fr;
-        border-left: none;
-        padding-left: 0;
-    }
-    
-    #carr-auto { font-size: 2rem; }
-}
-
-@media (max-width: 480px) {
-    .carriere-content { padding: 2rem 1rem; }
-    #carr-grid3 { padding: 1.5rem; }
-    .email-me { flex-direction: column; text-align: center; }
-}
-
 /* Scroll Animation classes */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
     transition: all 0.8s ease-out;
 }
+
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* --- RESPONSIVE DESIGN --- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .carriere-content {
+        padding: 3rem 1.5rem;
+    }
+
+    .carriere-grid-container {
+        gap: 2.5rem;
+        padding-left: 2rem;
+    }
+
+    #carr-auto {
+        font-size: 2.2rem;
+    }
+
+    #carr-grid3 {
+        padding: 2rem;
+    }
+}
+
+/* Mobile landscape / Small tablets */
+@media (max-width: 768px) {
+    .carriere-content {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .carriere-grid-container {
+        grid-template-columns: 1fr;
+        border-left: none;
+        padding-left: 0;
+        gap: 2rem;
+    }
+
+    #carr-auto {
+        font-size: 2rem;
+    }
+
+    #carriere-grid2 {
+        font-size: 1rem;
+    }
+
+    .carr-list h4 {
+        font-size: 1rem;
+    }
+
+    #carr-grid3 h1 {
+        font-size: 1.8rem;
+    }
+
+    #carr-grid3 h3 {
+        font-size: 1rem;
+    }
+
+    .email-me {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .email-me h3 {
+        font-size: 0.9rem;
+    }
+
+    .social-icons {
+        gap: 2rem;
+    }
+
+    .linkedin-icon,
+    .github-icon,
+    .insta-icon {
+        font-size: 2.2rem;
+    }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+    .carriere-content {
+        padding: 2rem 1rem;
+    }
+
+    .carriere-grid-container {
+        gap: 1.5rem;
+    }
+
+    #carr-auto {
+        font-size: 1.8rem;
+    }
+
+    #carriere-grid2 {
+        font-size: 0.95rem;
+    }
+
+    .carr-list {
+        gap: 0.3rem;
+    }
+
+    .carr-list h4 {
+        font-size: 0.95rem;
+    }
+
+    #carr-grid3 {
+        padding: 1.5rem;
+    }
+
+    #carr-grid3 h1 {
+        font-size: 1.5rem;
+    }
+
+    #carr-grid3 h3 {
+        font-size: 0.95rem;
+    }
+
+    .input-sub h5 {
+        font-size: 0.9rem;
+    }
+
+    .abonner,
+    .abonner-btn {
+        height: 2.8rem;
+        font-size: 0.9rem;
+    }
+
+    .email-me {
+        margin-top: 2rem;
+        padding: 1.5rem 0;
+    }
+
+    .email-me h3 {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .social-icons {
+        gap: 1.5rem;
+    }
+
+    .linkedin-icon,
+    .github-icon,
+    .insta-icon {
+        font-size: 2rem;
+    }
+}
+
+/* Very small screens */
+@media (max-width: 370px) {
+    .carriere-content {
+        padding: 1.5rem 0.8rem;
+    }
+
+    #carr-auto {
+        font-size: 1.5rem;
+    }
+
+    #carriere-grid2 {
+        font-size: 0.9rem;
+    }
+
+    .carr-list h4 {
+        font-size: 0.9rem;
+    }
+
+    #carr-grid3 {
+        padding: 1.2rem;
+    }
+
+    #carr-grid3 h1 {
+        font-size: 1.3rem;
+    }
+
+    #carr-grid3 h3 {
+        font-size: 0.9rem;
+    }
+
+    .email-me h3 {
+        font-size: 0.8rem;
+    }
+
+    .social-icons {
+        gap: 1rem;
+    }
+
+    .linkedin-icon,
+    .github-icon,
+    .insta-icon {
+        font-size: 1.8rem;
+    }
 }

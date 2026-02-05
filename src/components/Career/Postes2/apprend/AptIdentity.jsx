@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
-
 import { FaArrowRight } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
-
+import "./Apprendre.css";
 const AptIdentity = () => {
   const navigate = useNavigate();
   const navToCvIng = () => navigate("/CvIngenieur");
@@ -15,7 +14,7 @@ const AptIdentity = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
-            observer.unobserve(entry.target); // déclenche une seule fois
+            observer.unobserve(entry.target);
           }
         });
       },
@@ -51,7 +50,7 @@ const AptIdentity = () => {
 
           <li className="fade-in-li">
             <h2>
-              Niveau d’études : Master ou Doctorat en Intelligence Artificielle,
+              Niveau d'études : Master ou Doctorat en Intelligence Artificielle,
               Informatique, Mathématiques appliquées ou domaines connexes.
             </h2>
           </li>
@@ -68,7 +67,7 @@ const AptIdentity = () => {
             <h2>Connaissance approfondie des architectures de réseaux neuronaux</h2>
             <br />
             <h2>
-              Expérience en traitement d’images, vision par ordinateur ou NLP
+              Expérience en traitement d'images, vision par ordinateur ou NLP
             </h2>
             <br />
             <h2>
@@ -87,12 +86,13 @@ const AptIdentity = () => {
             </h2>
           </li>
         </ul>
-
-        <div className="ia-button">
-          <button onClick={navToCvIng}>
-            Postuler <FaArrowRight className="arr" />
-          </button>
-        </div>
+      </div>
+      
+      {/* FIXED: Moved button OUTSIDE the grid container */}
+      <div className="ia-button">
+        <button onClick={navToCvIng}>
+          Postuler <FaArrowRight className="arr" />
+        </button>
       </div>
     </div>
   );

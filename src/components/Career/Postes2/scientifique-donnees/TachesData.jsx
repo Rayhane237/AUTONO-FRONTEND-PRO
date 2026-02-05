@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 
-
 const TachesData = () => {
   useEffect(() => {
     const items = document.querySelectorAll(".fade-in-li");
@@ -37,7 +36,7 @@ const TachesData = () => {
           <li className="fade-in-li">
             <h2>
               Concevoir et développer des modèles de machine learning et
-              d’intelligence artificielle pour analyser les données.
+              d'intelligence artificielle pour analyser les données.
             </h2>
           </li>
           <li className="fade-in-li">
@@ -49,7 +48,7 @@ const TachesData = () => {
           <li className="fade-in-li">
             <h2>
               Interpréter les résultats et transformer les données en
-              informations exploitables pour l’entreprise.
+              informations exploitables pour l'entreprise.
             </h2>
           </li>
         </ul>
@@ -70,12 +69,12 @@ const TachesData = () => {
           <li className="fade-in-li">
             <h2>
               Publier les résultats de recherche et contribuer à
-              l’amélioration continue des processus analytiques.
+              l'amélioration continue des processus analytiques.
             </h2>
           </li>
           <li className="fade-in-li">
             <h2>
-              Garantir la qualité, la sécurité et l’éthique dans la gestion des
+              Garantir la qualité, la sécurité et l'éthique dans la gestion des
               données et des modèles utilisés.
             </h2>
           </li>
